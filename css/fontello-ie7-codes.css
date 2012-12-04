@@ -1,0 +1,16 @@
+
+.icon-heart-empty-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe99c;&nbsp;'); }
+.icon-heart-5 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe99b;&nbsp;'); }
+.icon-basket-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe962;&nbsp;'); }
+.icon-left-open-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe863;&nbsp;'); }
+.icon-right-open-3 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe864;&nbsp;'); }
+.icon-twitter-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9fc;&nbsp;'); }
+.icon-facebook-squared-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9fa;&nbsp;'); }
+.icon-gplus-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe9f9;&nbsp;'); }
+.icon-pinterest-1 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xea04;&nbsp;'); }
+.icon-tumblr-2 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xea07;&nbsp;'); }
+.icon-leaf { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f342;&nbsp;'); }
+.icon-gift { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f381;&nbsp;'); }
+.icon-user-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe894;&nbsp;'); }
+.icon-search-4 { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe8ec;&nbsp;'); }
+.icon-truck { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x1f69a;&nbsp;'); }

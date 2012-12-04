@@ -1,0 +1,350 @@
+@import 'grid.less';
+@columns: 12;
+@column-width: 60;
+@gutter-width: 20;
+
+@deepGreen: #AFC065;
+@lightGreen: #E4F277;
+@beige: #FFFCCF;
+@lightBrown: #E0E0AC;
+@deepBrown: #47290A;
+@linearG: linear-gradient(bottom, rgb(224,224,172) 1%, rgb(246,244,197) 51%, rgb(255,252,207) 76%);
+@oLinearG: -o-linear-gradient(bottom, rgb(224,224,172) 1%, rgb(246,244,197) 51%, rgb(255,252,207) 76%);
+@mozLinearG: -moz-linear-gradient(bottom, rgb(224,224,172) 1%, rgb(246,244,197) 51%, rgb(255,252,207) 76%);
+@webLinearG: -webkit-linear-gradient(bottom, rgb(224,224,172) 1%, rgb(246,244,197) 51%, rgb(255,252,207) 76%);
+@msLinearG: -ms-linear-gradient(bottom, rgb(224,224,172) 1%, rgb(246,244,197) 51%, rgb(255,252,207) 76%);
+@webkitG: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.01, rgb(224,224,172)),
+color-stop(0.51, rgb(246,244,197)),
+color-stop(0.76, rgb(255,252,207))
+);
+
+@avenir: Avenir, Sans-Serif;
+@fontSize: 16px;
+@didone: Didone, Sans-Serif;
+
+@mozShadow: 1px 1px 5px 0px #656565;
+@webShadow: 1px 1px 5px 0px #656565;
+@oBoxShadow: 1px 1px 5px 0px #656565;
+@boxShadow: 1px 1px 5px 0px #656565;
+/************************************************
+/* RESTE MEYER
+************************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+/************************************************
+/* FIN RESTE MEYER
+************************************************/
+
+.clearfix() {
+  zoom: 1;
+  &:before { content: ''; display: block; }
+  &:after { content: ''; display: table; clear: both; }
+}
+
+
+body{
+  background-color: @deepGreen;
+  font-family: @avenir;
+  font-size: @fontSize;
+}
+
+.container{
+  width: 950px;
+  margin: 0 auto;
+}
+
+//@TODO:box-shadow
+
+.content{
+  background-color: white;
+  margin: 0 auto;
+  width: 900px;
+  position: relative;
+  .clearfix;
+}
+
+h2{
+  color: @deepBrown;
+}
+
+p{
+  color: @deepGreen;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+                                /* Header */
+/* Logo */
+.logo{
+  width: 510px;
+  margin: 0 auto;
+}
+
+
+/* Nav */
+nav{
+  background-image: @linearG;
+  background-image: @oLinearG;
+  background-image: @mozLinearG;
+  background-image: @webLinearG;
+  background-image: @msLinearG;
+  background-image: @webkitG;
+  width: 100%;
+  height: 35px;
+}
+
+nav li>ul{
+  display: none;
+}
+
+nav li:hover>ul{
+  display: inline-block;
+  position: absolute;
+}
+
+nav li:hover li{
+  float: none;
+  margin: 0.5em 0;
+}
+
+nav>ul li{
+  float: left;
+  margin: 0.5em 1em;
+}
+
+nav>ul a{
+  color: @deepBrown;
+  display: block;
+}
+
+nav li ul{
+  background-image: @linearG;
+  background-image: @oLinearG;
+  background-image: @mozLinearG;
+  background-image: @webLinearG;
+  background-image: @msLinearG;
+  background-image: @webkitG;
+  padding: 0.5em;
+  -webkit-border-bottom-right-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+  -moz-border-radius-bottomright: 6px;
+  -moz-border-radius-bottomleft: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+              /* Content Header */
+
+/* Slider */
+.slider{
+  height: 300px;
+  width: 900px;
+  margin: 1em auto;
+}
+.first{
+  width: 700px;
+  float: left;
+  position: relative;
+}
+
+.moreInfo{
+  width: 250px;
+  position: absolute;
+  top: 175px;
+  left: 25px;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.slider .first a{
+  height: 300px;
+  display: inline-block;
+}
+
+.slider li a{
+  height: 100px;
+  display: inline-block;
+  float: right;
+}
+            /* Section */
+section{
+  width: 70%;
+  margin: 0 3% 2% 3%;
+  float: left;
+}
+
+article{
+  height: 350px;
+  margin-bottom: 2em;
+}
+
+.nouveaute li, .coeur li, .promos li{
+  float: left;
+  width: 30%;
+  margin: 0 1.5%;
+}
+
+.nouveaute img, .coeur img, .promos img{
+  width: 150px;
+}
+
+.nouveaute h1, .coeur h1, .promos h1{
+  font-famili: @didone;
+  font-size: 1.5em;
+  color: @deepBrown;
+  margin: 0 auto;
+  width: 200px;
+  margin-bottom: 1em;
+}
+
+.nouveaute li>a, .coeur li>a, .promos li>a{
+  height: 200px;
+  display: inline-block;
+}
+
+hr{
+  background-image: url();
+}
+
+/* Annonces */
+.annonces:before {
+  top: 0px;
+  left: 5%;
+  width: 90%;
+  height: 50px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 8px #555;
+}
+.annonces:after {
+  bottom: 0px;
+  left: 5%;
+  width: 90%;
+  height: 50px;
+  border-radius: 125px / 12px;
+  box-shadow: 0 0 8px #565656;
+}
+
+.annonces p{
+  color: @deepBrown;
+  display: inline-block;
+  width: 30%;
+  margin: 5% 1%
+}
+
+                        /* Aside */
+
+aside{
+  display: inline-block;
+  position: absolute;
+  left: 700px;
+}
+
+.recherche{
+  background-color: @lightGreen;
+  width: 100%;
+  display: inline-block;
+}
+
+.sidebar{
+  margin-top: 1em;
+  background-color: @beige;
+}
+
+aside input{
+  display: block;
+  width: 200px;
+  margin: 1em 0;
+}
+
+.sidebarBlock{
+  padding: 1em;
+}
+
+.sidebarBlock a{
+  color: @deepBrown;
+  font-size: 14px;
+  display: block;
+}
+
+.sidebarBlock p{
+  text-align: center;
+}
+
+.recherche input{
+  margin: 1em 1em 0.5em 1em;
+}
+
+
+/*Footer */
+footer{
+  clear: both;
+}
+
+footer nav{
+  font-size: 12px;
+  width: 950px;
+}
+
+footer nav li{
+  margin-top: 1em;
+}

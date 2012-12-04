@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+
+.icon-heart-empty-3:before { content: '\e99c'; } /* '' */
+.icon-heart-5:before { content: '\e99b'; } /* '' */
+.icon-basket-1:before { content: '\e962'; } /* '' */
+.icon-left-open-3:before { content: '\e863'; } /* '' */
+.icon-right-open-3:before { content: '\e864'; } /* '' */
+.icon-twitter-4:before { content: '\e9fc'; } /* '' */
+.icon-facebook-squared-1:before { content: '\e9fa'; } /* '' */
+.icon-gplus-2:before { content: '\e9f9'; } /* '' */
+.icon-pinterest-1:before { content: '\ea04'; } /* '' */
+.icon-tumblr-2:before { content: '\ea07'; } /* '' */
+.icon-leaf:before { content: '🍂'; } /* '\1f342' */
+.icon-gift:before { content: '🎁'; } /* '\1f381' */
+.icon-user-4:before { content: '\e894'; } /* '' */
+.icon-search-4:before { content: '\e8ec'; } /* '' */
+.icon-truck:before { content: '🚚'; } /* '\1f69a' */
