@@ -1,8 +1,26 @@
+/* Import GRID */
 @import 'grid.less';
 @columns: 12;
 @column-width: 60;
 @gutter-width: 20;
+@total-width: 100%;
 
+/* Font */
+@font-face {
+  font-family: 'QuicksandBook';
+  src: url('./font/Quicksand_Book-webfont.eot');
+  src: url('./font/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./font/Quicksand_Book-webfont.woff') format('woff'),
+  url('./font/Quicksand_Book-webfont.ttf') format('truetype'),
+  url('./font/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@QuicksandBook: 'QuicksandBook', Arial, sans-serif;
+@fontSize: 16px;
+
+/* Design effects */
 @deepGreen: #AFC065;
 @lightGreen: #E4F277;
 @beige: #FFFCCF;
@@ -21,15 +39,11 @@
 color-stop(0.51, rgb(246,244,197)),
 color-stop(0.76, rgb(255,252,207))
 );
+@mozShadow: 1px 0px 5px 0px #656565;
+@webShadow: 1px 0px 5px 0px #656565;
+@oBoxShadow: 1px 0px 5px 0px #656565;
+@boxShadow: 1px 0px 5px 0px #656565;
 
-@avenir: Avenir, Sans-Serif;
-@fontSize: 16px;
-@didone: Didone, Sans-Serif;
-
-@mozShadow: 1px 1px 5px 0px #656565;
-@webShadow: 1px 1px 5px 0px #656565;
-@oBoxShadow: 1px 1px 5px 0px #656565;
-@boxShadow: 1px 1px 5px 0px #656565;
 /************************************************
 /* RESTE MEYER
 ************************************************/
@@ -97,24 +111,22 @@ blockquote, q {
   &:after { content: ''; display: table; clear: both; }
 }
 
-
 body{
   background-color: @deepGreen;
-  font-family: @avenir;
+  font-family: @QuicksandBook;
   font-size: @fontSize;
 }
 
 .container{
-  width: 950px;
+  max-width: 960px;
   margin: 0 auto;
+  overflow: hidden;
 }
-
-//@TODO:box-shadow
 
 .content{
   background-color: white;
   margin: 0 auto;
-  width: 900px;
+  .column(12);
   position: relative;
   .clearfix;
 }
@@ -125,16 +137,21 @@ h2{
 
 p{
   color: @deepGreen;
+  font-family: @QuicksandBook;
 }
 
 a{
   text-decoration: none;
+  font-family: @QuicksandBook;
 }
 
 a:hover{
   text-decoration: underline;
 }
                                 /* Header */
+header#top{
+  width: 100%
+}
 /* Logo */
 .logo{
   width: 510px;
@@ -150,9 +167,14 @@ nav{
   background-image: @webLinearG;
   background-image: @msLinearG;
   background-image: @webkitG;
-  width: 100%;
-  height: 35px;
+  height: 40px;
+  -moz-box-shadow: @mozShadow;
+  -webkit-box-shadow: @webShadow;
+  -o-box-shadow: @oBoxShadow;
+  box-shadow: @boxShadow;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
 }
+
 
 nav li>ul{
   display: none;
@@ -170,7 +192,14 @@ nav li:hover li{
 
 nav>ul li{
   float: left;
-  margin: 0.5em 1em;
+  margin: 0.75em 0 0.5em 0;
+  padding: 0 0.75em;
+  border-left: 1px solid @deepGreen;
+  height: 1.25em;
+}
+
+nav>ul li:first-child{
+  border-left: none;
 }
 
 nav>ul a{
@@ -197,15 +226,23 @@ nav li ul{
               /* Content Header */
 
 /* Slider */
-.slider{
+.slider {
   height: 300px;
-  width: 900px;
-  margin: 1em auto;
+  margin-top: 1em;
 }
-.first{
-  width: 700px;
-  float: left;
+
+.slider .first {
+  .column(8);
+  .push(1);
+ /* float: left;*/
+  margin-right: 0;
   position: relative;
+}
+
+.slider li {
+  .column(2);
+  .pull(1);
+  margin: 0;
 }
 
 .moreInfo{
@@ -224,24 +261,59 @@ nav li ul{
 .slider li a{
   height: 100px;
   display: inline-block;
-  float: right;
-}
-            /* Section */
-section{
-  width: 70%;
-  margin: 0 3% 2% 3%;
-  float: left;
+  float: left; 
 }
 
+            /* Section */
+
+section{
+  .column(8);
+  .push(1);
+  margin-top: 2em;
+}
+
+/* Annonces */
+.annonces p{
+  color: @deepBrown;
+  .column(4);
+  margin-top: 2em;
+  margin-bottom: 1em;
+  font-size: 14px;
+}
+
+hr {
+  display: block;
+  clear: both;
+  height: 0;
+  padding: 0;
+  border: 0;
+}
+hr:after {
+  content: url("../img/bandeau.jpg");
+  height: 0;
+}
+
+/* Promo, nouveauté, coup de coeur */
 article{
+  border-bottom: 2px solid #EBEBEB;
   height: 350px;
   margin-bottom: 2em;
 }
 
+article:last-child{
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+article h2 a{
+  color: @deepBrown;
+}
+
+article p a{
+  color: @deepGreen;
+}
 .nouveaute li, .coeur li, .promos li{
-  float: left;
-  width: 30%;
-  margin: 0 1.5%;
+  .column(4);
 }
 
 .nouveaute img, .coeur img, .promos img{
@@ -249,7 +321,7 @@ article{
 }
 
 .nouveaute h1, .coeur h1, .promos h1{
-  font-famili: @didone;
+  font-famili: @QuicksandBook;
   font-size: 1.5em;
   color: @deepBrown;
   margin: 0 auto;
@@ -261,42 +333,20 @@ article{
   height: 200px;
   display: inline-block;
 }
-
-hr{
-  background-image: url();
-}
-
-/* Annonces */
-.annonces:before {
-  top: 0px;
-  left: 5%;
-  width: 90%;
-  height: 50px;
-  border-radius: 125px / 12px;
-  box-shadow: 0 0 8px #555;
-}
-.annonces:after {
-  bottom: 0px;
-  left: 5%;
-  width: 90%;
-  height: 50px;
-  border-radius: 125px / 12px;
-  box-shadow: 0 0 8px #565656;
-}
-
-.annonces p{
-  color: @deepBrown;
-  display: inline-block;
-  width: 30%;
-  margin: 5% 1%
-}
-
                         /* Aside */
 
 aside{
-  display: inline-block;
+  /*display: inline-block;*/
   position: absolute;
-  left: 700px;
+  left: 725px;
+  top: 450px;
+  .column(3);
+}
+
+.recherche, .sidebar, .moreInfo{
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 .recherche{
@@ -310,14 +360,33 @@ aside{
   background-color: @beige;
 }
 
-aside input{
-  display: block;
-  width: 200px;
+.recherche span{
+  margin-left: 1em;
+}
+
+.recherche input{
+  width: 150px;
+  display: inline;
   margin: 1em 0;
 }
 
+aside input{
+  display: block;
+  width: 175px;
+  margin: 1em 0;
+}
+
+aside header{
+  margin-bottom: 0.5em;
+}
 .sidebarBlock{
-  padding: 1em;
+  padding: 1em 0;
+  margin: 1em 1em;
+  border-bottom: 1px solid #DFDFDF;
+}
+
+.sidebarBlock:last-child{
+  border-bottom: none;
 }
 
 .sidebarBlock a{
@@ -330,21 +399,22 @@ aside input{
   text-align: center;
 }
 
-.recherche input{
-  margin: 1em 1em 0.5em 1em;
+input[type="submit"]{
+  width:200px;
 }
-
 
 /*Footer */
 footer{
   clear: both;
+  margin-bottom: 1em;
 }
 
 footer nav{
   font-size: 12px;
-  width: 950px;
 }
 
 footer nav li{
-  margin-top: 1em;
+  margin-top: 1.25em;
+  padding: 0 0.30em;
+  height: 1em;
 }
