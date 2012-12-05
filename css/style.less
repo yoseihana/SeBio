@@ -7,17 +7,41 @@
 
 /* Font */
 @font-face {
+  font-family: 'QuicksandLight';
+  src: url('./font/Quicksand_Light-webfont.eot');
+  src: url('./font/Quicksand_Light-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./font/Quicksand_Light-webfont.woff') format('woff'),
+  url('./font/Quicksand_Light-webfont.ttf') format('truetype'),
+  url('./font/Quicksand_Light-webfont.svg#QuicksandLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'QuicksandBook';
   src: url('./font/Quicksand_Book-webfont.eot');
-  src: url('./font/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+  src: url('Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
   url('./font/Quicksand_Book-webfont.woff') format('woff'),
   url('./font/Quicksand_Book-webfont.ttf') format('truetype'),
   url('./font/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'QuicksandBold';
+  src: url('./font/Quicksand_Bold-webfont.eot');
+  src: url('./font/Quicksand_Bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('./font/Quicksand_Bold-webfont.woff') format('woff'),
+  url('./font/Quicksand_Bold-webfont.ttf') format('truetype'),
+  url('./font/Quicksand_Bold-webfont.svg#QuicksandBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
 
 }
 @QuicksandBook: 'QuicksandBook', Arial, sans-serif;
+@QuicksandBold: 'QuicksandBold', Arial, sans-serif;
+@QuicksandLight: 'QuicksandLight', Arial, sans-serif;
 @fontSize: 16px;
 
 /* Design effects */
@@ -129,10 +153,12 @@ body{
   .column(12);
   position: relative;
   .clearfix;
+  z-index: 1;
 }
 
-h2{
+h2, article h2 a{
   color: @deepBrown;
+  font-family: @QuicksandBold;
 }
 
 p{
@@ -145,9 +171,6 @@ a{
   font-family: @QuicksandBook;
 }
 
-a:hover{
-  text-decoration: underline;
-}
                                 /* Header */
 header#top{
   width: 100%
@@ -173,14 +196,22 @@ nav{
   -o-box-shadow: @oBoxShadow;
   box-shadow: @boxShadow;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
+  z-index: 2;
 }
 
-
-nav li>ul{
+.submenu{
   display: none;
+  z-index:3;
 }
 
-nav li:hover>ul{
+.submenu li{
+  border-left: none;
+}
+nav a:hover{
+  font-family: @QuicksandBold;
+  text-decoration: none;
+}
+nav li:hover .submenu{
   display: inline-block;
   position: absolute;
 }
@@ -305,12 +336,29 @@ article:last-child{
   margin-bottom: 0;
 }
 
-article h2 a{
+article p:hover, article h2 a:hover{
+  background-color: @deepGreen;
+  padding: 0.5em 0.5em;
+}
+
+article p:hover a{
   color: @deepBrown;
+}
+
+.prix a{
+  color: @deepBrown;
+}
+
+.prix{
+  text-align: right;
 }
 
 article p a{
   color: @deepGreen;
+}
+
+article h2, article p{
+  padding: 0.5em 0;
 }
 .nouveaute li, .coeur li, .promos li{
   .column(4);
@@ -336,21 +384,20 @@ article p a{
                         /* Aside */
 
 aside{
-  /*display: inline-block;*/
   position: absolute;
   left: 725px;
   top: 450px;
   .column(3);
 }
 
-.recherche, .sidebar, .moreInfo{
+.recherche, .sidebar, .moreInfo, article p:hover, article h2 a:hover{
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
 .recherche{
-  background-color: @lightGreen;
+  background-color: @lightBrown;
   width: 100%;
   display: inline-block;
 }
