@@ -211,6 +211,26 @@ nav a:hover{
   font-family: @QuicksandBold;
   text-decoration: none;
 }
+
+nav li:hover{
+  background-image: linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+  background-image: -o-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+  background-image: -moz-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+  background-image: -webkit-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+  background-image: -ms-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(255,252,207)),
+    color-stop(0.78, rgb(224,224,172))
+  );
+  height: 20px;
+  margin: 0 0;
+  padding:0.75em 0.75em 0.5em 0.75em;
+
+}
 nav li:hover .submenu{
   display: inline-block;
   position: absolute;
@@ -327,7 +347,7 @@ hr:after {
 /* Promo, nouveauté, coup de coeur */
 article{
   border-bottom: 2px solid #EBEBEB;
-  height: 350px;
+  height: 400px;
   margin-bottom: 2em;
 }
 
@@ -336,12 +356,7 @@ article:last-child{
   margin-bottom: 0;
 }
 
-article p:hover, article h2 a:hover{
-  background-color: @deepGreen;
-  padding: 0.5em 0.5em;
-}
-
-article p:hover a{
+article p:hover a, .panier:hover{
   color: @deepBrown;
 }
 
@@ -349,8 +364,34 @@ article p:hover a{
   color: @deepBrown;
 }
 
+.prix:hover{
+  background-image: linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
+  background-image: -o-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
+  background-image: -moz-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
+  background-image: -webkit-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
+  background-image: -ms-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
+
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0, rgb(175,192,101)),
+    color-stop(0.78, rgb(228,242,119))
+  );
+  padding: 0.5em 0.5em 0 0.5em;
+}
+
 .prix{
-  text-align: right;
+  float: left;
+}
+
+.panier{
+  float: right;
+  margin-right: 0.5em;
+}
+
+.plus{
+  float: right;
 }
 
 article p a{
@@ -402,6 +443,14 @@ aside{
   display: inline-block;
 }
 
+.recherche, .sidebar{
+  -moz-box-shadow: @mozShadow;
+  -webkit-box-shadow: @webShadow;
+  -o-box-shadow: @oBoxShadow;
+  box-shadow: @boxShadow;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
+}
+
 .sidebar{
   margin-top: 1em;
   background-color: @beige;
@@ -409,6 +458,7 @@ aside{
 
 .recherche span{
   margin-left: 1em;
+  color: @deepBrown;
 }
 
 .recherche input{
