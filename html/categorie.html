@@ -1,53 +1,75 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sebio acceuil</title>
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="utf-8">
+
+    <title>SeBio accueil</title>
+
+    <!-- Google Chrome Frame for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- mobile meta (hooray!) -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/animation.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/fontello-codes.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/fontello-embedded.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/fontello-ie7-codes.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/fontello-ie7.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="./css/fontello.css" media="screen" />
+    <link rel="stylesheet" href="./css/fontStyle.css" type="text/css" media="screen" />
+
+    <script src="./js/less-1.1.3.min.js" type="text/javascript" ></script>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" class="icon-leaf">
+
+
 </head>
 <body>
-<header>
+<div class="container">
+<header id="top">
     <div class="logo">
-        <a href="#" title="Retour à la page home de SeBio" alt="Logo de retour à la page home de SeBio"></a>
-        <img src="img/logo.png" title="Logo de SeBio" alt="Logo de SeBio" />
+        <a href="#" title="Retour à la page home de SeBio" alt="Logo de retour à la page home de SeBio"><img src="img/logo.png" title="Logo de SeBio" alt="Logo de SeBio" /></a>
+
     </div>
     <nav>
         <ul>
-            <ul>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Santé et Soins" alt="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
-                    <ul>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Hygiène" alt="Aller vers la catégorie Hygiène">Hygiène</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Soins" alt="Aller vers la catégorie Soins">Soins</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Beauté et parfums" alt="Aller vers la catégorie Beauté et parfums">Beauté et parfums</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Aromathérapie" alt="Aller vers la catégorie Aromathérapie">Aromathérapie</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Fleur de Bach" alt="Aller vers la catégorie Aromathérapie">Fleur de Bach</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Santé" alt="Aller vers la catégorie Santé">Santé</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Habillement" alt="Aller vers la rubrique Habillement">Habillement</a>
-                    <ul>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement dame" alt="Aller vers la catégorie Vêtement dame">Vêtement dame</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement homme" alt="Aller vers la catégorie Vêtement homme">Vêtement homme</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement enfant" alt="Aller vers la catégorie Vêtement enfant">Vêtement enfant</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Enfant" alt="Aller vers la rubrique Enfant">Enfant</a>
-                    <ul>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Grossesse" alt="Aller vers la catégorie Grossesse">Grossesse</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Allaitement" alt="Aller vers la catégorie Allaitement">Allaitement</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Jeux" alt="Aller vers la catégorie Jeux">Jeux</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Alimentation" alt="Aller vers la catégorie Alimentation">Alimentation</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Liste de naissance" alt="Aller vers la catégorie Liste de naissance">Liste de naissance</a></li>
-                        <li><a href="./html/categorie.html" title="Aller vers la catégorie Couches" alt="Aller vers la catégorie Couches">Couches</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Maison" alt="Aller vers la rubrique Maison">Maison</a>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Santé et Soins" alt="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
+                <ul>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Hygiène" alt="Aller vers la catégorie Hygiène">Hygiène</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Soins" alt="Aller vers la catégorie Soins">Soins</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Beauté et parfums" alt="Aller vers la catégorie Beauté et parfums">Beauté et parfums</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Aromathérapie" alt="Aller vers la catégorie Aromathérapie">Aromathérapie</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Fleur de Bach" alt="Aller vers la catégorie Aromathérapie">Fleur de Bach</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Santé" alt="Aller vers la catégorie Santé">Santé</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Habillement" alt="Aller vers la rubrique Habillement">Habillement</a>
+                <ul>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement dame" alt="Aller vers la catégorie Vêtement dame">Vêtement dame</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement homme" alt="Aller vers la catégorie Vêtement homme">Vêtement homme</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement enfant" alt="Aller vers la catégorie Vêtement enfant">Vêtement enfant</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Enfant" alt="Aller vers la rubrique Enfant">Enfant</a>
+                <ul>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Grossesse" alt="Aller vers la catégorie Grossesse">Grossesse</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Allaitement" alt="Aller vers la catégorie Allaitement">Allaitement</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Jeux" alt="Aller vers la catégorie Jeux">Jeux</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Alimentation" alt="Aller vers la catégorie Alimentation">Alimentation</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Liste de naissance" alt="Aller vers la catégorie Liste de naissance">Liste de naissance</a></li>
+                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Couches" alt="Aller vers la catégorie Couches">Couches</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Maison" alt="Aller vers la rubrique Maison">Maison</a>
+                <ul>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Entretien" alt="Aller vers la catégorie Entretien">Entretien</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Cuisine" alt="Aller vers la catégorie Cuisine">Cuisine</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Salle de bain" alt="Aller vers la catégorie Salle de bain">Salle de bains</a></li>
@@ -56,9 +78,11 @@
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Jardin" alt="Aller vers la catégorie Jardin">Jardin</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
-                </li>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Papeterie" alt="Aller vers la rubrique Papeterie">Papeterie</a>
+                </ul>
+            </li>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Papeterie" alt="Aller vers la rubrique Papeterie">Papeterie</a>
+                <ul>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Livre enfant" alt="Aller vers la catégorie Livre enfant">Livre enfant</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Livre adulte" alt="Aller vers la catégorie Livre adulte">Livre adulte</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Papier" alt="Aller vers la catégorie Papier">Papier</a></li>
@@ -67,23 +91,19 @@
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Maroquinerie" alt="Aller vers la catégorie Maroquinerie">Maroquinerie</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Cahier et calendrier">Cahier et calendrier</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
-                </li>
-                <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Bons Plans" alt="Aller vers la rubrique Bons Plans">Bons Plans</a>
-                </li>
-                <li>
-                    <a href="./html/panier.html" title="Aller dans votre panier" alt="Aller dans votre panier">0 article</a>
-                </li>
-                <li>
-                    <a href="./html/membre.html" title="Aller vers l'espace membre" alt="Aller vers l'espace membre">Connexion</a>
-                </li>
-            </ul>
+                </ul>
+            </li>
+            <li>
+                <a href="./html/sante.html" title="Aller vers la rubrique Bons Plans" alt="Aller vers la rubrique Bons Plans" class="icon-alert">Bons Plans</a>
+            </li>
+            <li>
+                <a href="./html/panier.html" title="Aller dans votre panier" alt="Aller dans votre panier" class="icon-basket-1">0 article</a>
+            </li>
+            <li>
+                <a href="./html/membre.html" title="Aller vers l'espace membre" alt="Aller vers l'espace membre" class="icon-lock-4">Connexion</a>
+            </li>
         </ul>
     </nav>
-    <div class="slider">
-        <img src="../img/biocosm.png" title="Bio cosmétique" alt="Bio cosmétique" />
-        <p>Produit de Santé et soins</p>
-    </div>
 </header>
 <section>
     <article class="produit">
@@ -206,6 +226,7 @@
             </li>
         </ul>
     </article>
+    </section>
     <aside>
         <div class="recherche">
             <input type="search" name="Recherche" value="Recherche" />
@@ -253,7 +274,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Fleur de Bach
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Fleur de Bach</a>
                         <ul>
                             <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Remèdes d'urgence</a></li>
                             <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Les fleurs de Bach</a></li>
@@ -261,7 +282,7 @@
                         </ul>
                 </li>
                 <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Santé
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Santé</a>
                         <ul>
                             <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Complément alimentaire</a></li>
                             <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Argile</a></li>
@@ -271,6 +292,20 @@
             </ul>
         </div>
     </aside>
-</section>
+</div>
+<footer>
+    <nav>
+        <ul>
+            <li><a href="#" title="Vers les mentions légales" alt="Vers les mentions légales">Mentions légales</a></li>
+            <li><a href="#" title="Vers les conditions générales de vente" alt="Vers les conditions générales de ventes">Conditions générales de vente</a></li>
+            <li><a href="#" title="Vers l'à propos de SeBio" alt="Vers l'à propos de SeBio">A propos de SeBio</a></li>
+            <li><a href="#" title="Vers les modes de payement" alt="Vers les modes de payement">Modes de payement</a></li>
+            <li><a href="#" title="Vers les Conditions de livraison" alt="Vers les Conditions de livraison">Conditions de livraison</a></li>
+            <li><a href="#" title="Vers le suivit de commande" alt="Vers le suivit de commande">Suivit de commande</a></li>
+            <li><a href="#" title="Vers les conditions de retour" alt="Vers les conditions de retour">Conditions de retour</a></li>
+        </ul>
+    </nav>
+</footer>
+</div>
 </body>
 </html>
