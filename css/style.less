@@ -63,10 +63,10 @@
 color-stop(0.51, rgb(246,244,197)),
 color-stop(0.76, rgb(255,252,207))
 );
-@mozShadow: 1px 0px 5px 0px #656565;
-@webShadow: 1px 0px 5px 0px #656565;
-@oBoxShadow: 1px 0px 5px 0px #656565;
-@boxShadow: 1px 0px 5px 0px #656565;
+@mozShadow: 1px 1px 10px 0px #656565;
+@webShadow: 1px 1px 10px 0px #656565;
+@oBoxShadow: 1px 1px 10px 0px #656565;
+@boxShadow: 1px 1px 10px 0px #656565;
 
 /************************************************
 /* RESTE MEYER
@@ -144,7 +144,6 @@ body{
 .container{
   max-width: 960px;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .content{
@@ -206,6 +205,12 @@ nav{
 
 .submenu li{
   border-left: none;
+
+}
+
+.submenu li:hover{
+  background-image: none;
+  padding: 0 0 0 0.75em;
 }
 nav a:hover{
   font-family: @QuicksandBold;
@@ -244,7 +249,7 @@ nav li:hover li{
 nav>ul li{
   float: left;
   margin: 0.75em 0 0.5em 0;
-  padding: 0 0.75em;
+  padding: 0 0.85em;
   border-left: 1px solid @deepGreen;
   height: 1.25em;
 }
@@ -317,6 +322,21 @@ nav li ul{
 
             /* Section */
 
+.breadcrumbs a{
+  color: @deepGreen;
+  font-size: 0.75em;
+}
+
+.breadcrumbs p{
+  display: inline-block;
+  color: @deepBrown;
+  font-size: 0.75em;
+}
+
+.breadcrumbs a:hover, .page a:hover{
+  color: @deepBrown
+}
+
 section{
   .column(8);
   .push(1);
@@ -347,7 +367,7 @@ hr:after {
 /* Promo, nouveauté, coup de coeur */
 article{
   border-bottom: 2px solid #EBEBEB;
-  height: 400px;
+  height: 450px;
   margin-bottom: 2em;
 }
 
@@ -356,21 +376,20 @@ article:last-child{
   margin-bottom: 0;
 }
 
-article p:hover a, .panier:hover{
+article p:hover a, .panier a, .prix a, .panier{
   color: @deepBrown;
 }
 
-.prix a{
-  color: @deepBrown;
+.panier, .prix{
+  margin: 1em 0 2em 0;
 }
 
-.prix:hover{
+.panier{
   background-image: linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
   background-image: -o-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
   background-image: -moz-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
   background-image: -webkit-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
   background-image: -ms-linear-gradient(bottom, rgb(175,192,101) 0%, rgb(228,242,119) 78%);
-
   background-image: -webkit-gradient(
     linear,
     left bottom,
@@ -378,7 +397,16 @@ article p:hover a, .panier:hover{
     color-stop(0, rgb(175,192,101)),
     color-stop(0.78, rgb(228,242,119))
   );
-  padding: 0.5em 0.5em 0 0.5em;
+  padding: 0.5em;
+  -moz-box-shadow: @mozShadow;
+  -webkit-box-shadow: @webShadow;
+  -o-box-shadow: @oBoxShadow;
+  box-shadow: @boxShadow;
+  filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
+}
+
+.panier a:hover, .prix a:hover{
+  font-family: @QuicksandBold;
 }
 
 .prix{
@@ -401,7 +429,7 @@ article p a{
 article h2, article p{
   padding: 0.5em 0;
 }
-.nouveaute li, .coeur li, .promos li{
+.nouveaute li, .coeur li, .promos li, .listingProduit li{
   .column(4);
 }
 
@@ -410,7 +438,7 @@ article h2, article p{
 }
 
 .nouveaute h1, .coeur h1, .promos h1{
-  font-famili: @QuicksandBook;
+  font-family: @QuicksandBook;
   font-size: 1.5em;
   color: @deepBrown;
   margin: 0 auto;
@@ -431,7 +459,7 @@ aside{
   .column(3);
 }
 
-.recherche, .sidebar, .moreInfo, article p:hover, article h2 a:hover{
+.recherche, .sidebar, .moreInfo, article p:hover, article h2 a:hover, .pageTitle{
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -510,4 +538,94 @@ footer nav li{
   margin-top: 1.25em;
   padding: 0 0.30em;
   height: 1em;
+}
+
+footer li:hover{
+  margin-top: 0.4em;
+}
+
+              /* Page rubrique  */
+#rubrique .slider, #categorie .slider{
+  height: 120px;
+}
+
+#rubrique aside, #categorie aside{
+  top: 175px;
+}
+
+#rubrique .nouveaute{
+  margin-top: 3em;
+}
+
+.pageTitle{
+  width: 250px;
+  position: absolute;
+  top: 75px;
+  left: 125px;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#rubrique .sidebar ul, #categorie .sidebar ul{
+  padding: 1em;
+}
+
+.sectionCategory{
+  padding: 0.5em 0;
+}
+
+.sectionCategory a{
+  color: @deepBrown;
+}
+
+.sectionCategory a:hover{
+  color: @deepGreen;
+}
+
+#rubrique .sectionCategory ul{
+  padding: 0.25em 1em;
+}
+
+.sectionCategory li{
+  line-height: 1.25em;
+}
+
+.titleCategorie{
+  font-weight: bold;
+}
+
+        /* Catégory */
+.tri{
+  .column(4);
+}
+
+.tri p{
+  font-size: 0.75em;
+  display: inline-block;
+}
+
+.filtre{
+  height: 50px;
+  margin: 1em 0;
+}
+
+.page li{
+  float: left;
+  margin: 0 0.5em;
+}
+
+.page a{
+  color:@deepGreen;
+}
+
+section footer{
+  clear: none;
+}
+
+footer .tri{
+  margin-bottom: 1em;
+}
+
+.listingProduit li{
+  margin-bottom: 2em;
 }

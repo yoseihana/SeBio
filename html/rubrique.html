@@ -1,153 +1,228 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sebio acceuil</title>
-    <!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <meta charset="utf-8">
+
+    <title>SeBio accueil</title>
+
+    <!-- Google Chrome Frame for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- mobile meta (hooray!) -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/animation.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fontello-codes.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fontello-embedded.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fontello-ie7-codes.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fontello-ie7.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../css/fontello.css" media="screen" />
+    <link rel="stylesheet" href="../css/fontStyle.css" type="text/css" media="screen" />
+
+    <script src="../js/less-1.1.3.min.js" type="text/javascript" ></script>
+    <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" class="icon-leaf">
+
+
 </head>
-<body>
-<header>
-    <div class="logo">
-        <a href="../index.php" title="Retour à la page home de SeBio" alt="Logo de retour à la page home de SeBio"></a>
-        <img src="img/logo.png" title="Logo de SeBio" alt="Logo de SeBio" />
-    </div>
-    <nav>
-        <ul>
-            <li>
-                <a href="./html/sante.html" title="Aller vers la rubrique Santé et Soins" alt="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
-                <ul>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Hygiène" alt="Aller vers la catégorie Hygiène">Hygiène</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Soins" alt="Aller vers la catégorie Soins">Soins</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Beauté et parfums" alt="Aller vers la catégorie Beauté et parfums">Beauté et parfums</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Aromathérapie" alt="Aller vers la catégorie Aromathérapie">Aromathérapie</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Fleur de Bach" alt="Aller vers la catégorie Aromathérapie">Fleur de Bach</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Santé" alt="Aller vers la catégorie Santé">Santé</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="./html/sante.html" title="Aller vers la rubrique Habillement" alt="Aller vers la rubrique Habillement">Habillement</a>
-                <ul>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement dame" alt="Aller vers la catégorie Vêtement dame">Vêtement dame</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement homme" alt="Aller vers la catégorie Vêtement homme">Vêtement homme</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Vêtement enfant" alt="Aller vers la catégorie Vêtement enfant">Vêtement enfant</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="./html/sante.html" title="Aller vers la rubrique Enfant" alt="Aller vers la rubrique Enfant">Enfant</a>
-                <ul>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Grossesse" alt="Aller vers la catégorie Grossesse">Grossesse</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Allaitement" alt="Aller vers la catégorie Allaitement">Allaitement</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Jeux" alt="Aller vers la catégorie Jeux">Jeux</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Alimentation" alt="Aller vers la catégorie Alimentation">Alimentation</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Liste de naissance" alt="Aller vers la catégorie Liste de naissance">Liste de naissance</a></li>
-                    <li><a href="./html/categorie.html" title="Aller vers la catégorie Couches" alt="Aller vers la catégorie Couches">Couches</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="./html/sante.html" title="Aller vers la rubrique Maison" alt="Aller vers la rubrique Maison">Maison</a>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Entretien" alt="Aller vers la catégorie Entretien">Entretien</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Cuisine" alt="Aller vers la catégorie Cuisine">Cuisine</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Salle de bain" alt="Aller vers la catégorie Salle de bain">Salle de bains</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Lessive" alt="Aller vers la catégorie Lessive">Lessive</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Droguerie" alt="Aller vers la catégorie Droguerie">Droguerie</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Jardin" alt="Aller vers la catégorie Jardin">Jardin</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
-            </li>
-            <li>
-                    <a href="./html/sante.html" title="Aller vers la rubrique Papeterie" alt="Aller vers la rubrique Papeterie">Papeterie</a>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Livre enfant" alt="Aller vers la catégorie Livre enfant">Livre enfant</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Livre adulte" alt="Aller vers la catégorie Livre adulte">Livre adulte</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Papier" alt="Aller vers la catégorie Papier">Papier</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Classer" alt="Aller vers la catégorie Classer">Classer</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Fournitures scolaire" alt="Aller vers la catégorie Fourniture scolaire">Fourniture scolaire</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Maroquinerie" alt="Aller vers la catégorie Maroquinerie">Maroquinerie</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Cahier et calendrier">Cahier et calendrier</a></li>
-                <li><a href="./html/categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
-            </li>
-            <li>
-                <a href="./html/sante.html" title="Aller vers la rubrique Bons Plans" alt="Aller vers la rubrique Bons Plans">Bons Plans</a>
-            </li>
-            <li>
-                <a href="./html/panier.html" title="Aller dans votre panier" alt="Aller dans votre panier">0 article</a>
-            </li>
-            <li>
-                <a href="./html/membre.html" title="Aller vers l'espace membre" alt="Aller vers l'espace membre">Connexion</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="slider">
-        <img src="../img/biocosm.png" title="Bio cosmétique" alt="Bio cosmétique" />
-        <p>Produit de Santé et soins</p>
-    </div>
-</header>
-<section>
-    <article class="nouveauté">
-        <header>
-        <h1>Nouveautés</h1>
-        </header>
-        <ul>
-            <li>
-                <a href="./html/produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="./img/body.jpg" title="Lot de 3 body pour enfant" alt="Lot de 3 body pour enfant" />
-                <h2>Body enfant</h2>
-                <p>Lot de 3 body pour bébé de 0 à 2 ans</p>
-                <p class="prix">18,75€</p>
-                </a>
-            </li>
-            <li>
-                <a href="./html/produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="./img/bijoux.jpg" title="Collier grelot pour femme enceinte" alt="Collier grelot pour femme enceinte" />
-                <h2>Collier grelot</h2>
-                <p>Collier grelot pour femme enceinte</p>
-                <p class="prix">35,90€</p>
-                </a>
-            </li>
-            <li>
-                <a href="./html/produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="./img/bougie.jpg" title="Bougie parfumée" alt="Bougie parfumée" />
-                <h2>Bougie parfumée</h2>
-                <p>Bougie parfumée à la vanille</p>
-                <p class="prix">10,00€</p>
-                </a>
-            </li>
-        </ul>
-    </article>
-    <article class="coeur">
-        <header>
-        <h1>Coup de coeur</h1>
-        </header>
-        <ul>
-            <li>
-                <a href="./html/produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="./img/deo.jpg" title="Déodorant roller" alt="Déordorant roller" />
-                <h2>Déodorant roller</h2>
-                <p>Déordorant roller naturel</p>
-                <p class="prix">8,75€</p>
-            </li>
-            <li>
-                <p class="rubrique"><a href="./html/sante.html" alt="Vers la rubrique Santé et Soins" title="Vers la rubrique Santé et Soins">Santé et Soins</a></p>
-                <img src="./img/gel.jpg" title="Gel de rasage pour homme" alt="Gel de rasage pour homme" />
-                <h2>Gel de rasage</h2>
-                <p>Gel de rasage pour homme</p>
-                <p class="prix">5,90€</p>
-                </a>
-            </li>
-            <li>
-                <a href="./html/produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="./img/grain.jpg" title="Graines de sésame" alt="Graines de sésame" />
-                <h2>Sésame</h2>
-                <p>Graines de sésame pour la cuisine</p>
-                <p class="prix">7,00€</p>
-                </a>
-            </li>
-        </ul>
-    </article>
-    <aside>
-        <div class="recherche">
-            <input type="search" name="Recherche" value="Recherche" />
+<body id="rubrique">
+<div class="container">
+    <header id="top">
+        <div class="logo">
+            <a href="../index.html" title="Retour à la page home de SeBio" alt="Logo de retour à la page home de SeBio"><img src="../img/logo.png" title="Logo de SeBio" alt="Logo de SeBio" /></a>
+
         </div>
-        <div class="categorie">
+        <nav>
             <ul>
                 <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Hygiène</a>
+                    <a href="rubrique.html" title="Aller vers la rubrique Santé et Soins" alt="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
+                    <ul class="submenu">
+                        <li><a href="categorie.html" title="Aller vers la catégorie Hygiène" alt="Aller vers la catégorie Hygiène">Hygiène</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Soins" alt="Aller vers la catégorie Soins">Soins</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Beauté et parfums" alt="Aller vers la catégorie Beauté et parfums">Beauté et parfums</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Aromathérapie" alt="Aller vers la catégorie Aromathérapie">Aromathérapie</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Fleur de Bach" alt="Aller vers la catégorie Aromathérapie">Fleur de Bach</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Santé" alt="Aller vers la catégorie Santé">Santé</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="rubrique.html" title="Aller vers la rubrique Habillement" alt="Aller vers la rubrique Habillement">Habillement</a>
+                    <ul class="submenu">
+                        <li><a href="categorie.html" title="Aller vers la catégorie Vêtement dame" alt="Aller vers la catégorie Vêtement dame">Vêtement dame</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Vêtement homme" alt="Aller vers la catégorie Vêtement homme">Vêtement homme</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Vêtement enfant" alt="Aller vers la catégorie Vêtement enfant">Vêtement enfant</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="rubrique.html" title="Aller vers la rubrique Enfant" alt="Aller vers la rubrique Enfant">Enfant</a>
+                    <ul class="submenu">
+                        <li><a href="categorie.html" title="Aller vers la catégorie Grossesse" alt="Aller vers la catégorie Grossesse">Grossesse</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Allaitement" alt="Aller vers la catégorie Allaitement">Allaitement</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Jeux" alt="Aller vers la catégorie Jeux">Jeux</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Alimentation" alt="Aller vers la catégorie Alimentation">Alimentation</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Liste de naissance" alt="Aller vers la catégorie Liste de naissance">Liste de naissance</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Couches" alt="Aller vers la catégorie Couches">Couches</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="rubrique.html" title="Aller vers la rubrique Maison" alt="Aller vers la rubrique Maison">Maison</a>
+                    <ul class="submenu">
+                        <li><a href="categorie.html" title="Aller vers la catégorie Entretien" alt="Aller vers la catégorie Entretien">Entretien</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Cuisine" alt="Aller vers la catégorie Cuisine">Cuisine</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Salle de bain" alt="Aller vers la catégorie Salle de bain">Salle de bains</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Lessive" alt="Aller vers la catégorie Lessive">Lessive</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Droguerie" alt="Aller vers la catégorie Droguerie">Droguerie</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Jardin" alt="Aller vers la catégorie Jardin">Jardin</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Accessoires">Accessoires</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="rubrique.html" title="Aller vers la rubrique Papeterie" alt="Aller vers la rubrique Papeterie">Papeterie</a>
+                    <ul class="submenu">
+                        <li><a href="categorie.html" title="Aller vers la catégorie Livre enfant" alt="Aller vers la catégorie Livre enfant">Livre enfant</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Livre adulte" alt="Aller vers la catégorie Livre adulte">Livre adulte</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Papier" alt="Aller vers la catégorie Papier">Papier</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Classer" alt="Aller vers la catégorie Classer">Classer</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Fournitures scolaire" alt="Aller vers la catégorie Fourniture scolaire">Fourniture scolaire</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Maroquinerie" alt="Aller vers la catégorie Maroquinerie">Maroquinerie</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Accessoires" alt="Aller vers la catégorie Cahier et calendrier">Cahier et calendrier</a></li>
+                        <li><a href="categorie.html" title="Aller vers la catégorie Tissus" alt="Aller vers la catégorie Tissus">Tissus</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="rubrique.html" title="Aller vers la rubrique Bons Plans" alt="Aller vers la rubrique Bons Plans" class="icon-alert">Bons Plans</a>
+                </li>
+                <li>
+                    <a href="panier.html" title="Aller dans votre panier" alt="Aller dans votre panier" class="icon-basket-1">1 article</a>
+                </li>
+                <li>
+                    <a href="membre.html" title="Aller vers l'espace membre" alt="Aller vers l'espace membre" class="icon-lock-4">Connexion</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <header class="slider">
+           <a href="#" title="Rurbrique Santé et Soins" alt="Rurbique Santé et Soins" class="first"><img src="../img/banner.jpg"></a>
+            <div class="pageTitle">
+                <h2>Soins et Santé</h2>
+            </div>
+        </header>
+        <section>
+            <header>
+                <div class="breadcrumbs">
+                    <a href="../index.html" title="Retour à la page d'accueil">Accueil</a>
+                    <p>></p>
+                   <a href="#" title="Page de santé et soins">Santé et soins</a>
+                </div>
+            </header>
+            <article class="nouveaute">
+                <header>
+                    <h1>Nouveautés</h1>
+                </header>
+                <ul>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/body.jpg" title="Lot de 3 body pour enfant" alt="Lot de 3 body pour enfant" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Body enfant</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Lot de 3 body pour bébé de 0 à 2 ans</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">18,75€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bijoux.jpg" title="Collier grelot pour femme enceinte" alt="Collier grelot pour femme enceinte" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Collier grelot</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Collier grelot pour femme enceinte</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">35,90€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bougie.jpg" title="Bougie parfumée" alt="Bougie parfumée" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Bougie parfumée</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Bougie parfumée à la vanille</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">10,00€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                </ul>
+                <p class="plus"><a href="rubrique.html" title="Aller sur la page pour voir plus de nouveauté" alt="Aller sur la page pour voir plus de nouveauté">Voir plus de nouveautés</a></p>
+            </article>
+            </hr>
+            <article class="coeur">
+                <header>
+                    <h1>Coup de coeur</h1>
+                </header>
+                <ul>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/body.jpg" title="Déodorant roller" alt="Déordorant roller" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Déodorant roller</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Déordorant roller naturel</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">8,75€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bijoux.jpg" title="Gel de rasage pour homme" alt="Gel de rasage pour homme" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Gel de rasage</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Gel de rasage pour homme</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">5,90€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bougie.jpg" title="Graines de sésame" alt="Graines de sésame" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Sésame</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Graines de sésame pour la cuisine</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">7,00€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                </ul>
+                <p class="plus"><a href="rubrique.html" title="Aller sur la page pour voir plus de coups de coeur" alt="Aller sur la page pour voir plus de coups de coeur">Voir plus de coups de coeur</a></p>
+            </article>
+            </hr>
+            <article class="promos">
+                <header>
+                    <h1>Bons Plans</h1>
+                </header>
+                <ul>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/body.jpg" title="Déodorant roller" alt="Déordorant roller" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Déodorant roller</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Déordorant roller naturel</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">8,75€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bijoux.jpg" title="Gel de rasage pour homme" alt="Gel de rasage pour homme" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Gel de rasage</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Gel de rasage pour homme</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">5,90€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                    <li>
+                        <a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit"><img src="../img/bougie.jpg" title="Graines de sésame" alt="Graines de sésame" /></a>
+                        <h2><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Sésame</a></h2>
+                        <p><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">Graines de sésame pour la cuisine</a></p>
+                        <p class="prix"><a href="produit.html" title="Vers la fiche du produit" alt="Vers la fiche du produit">7,00€</a></p>
+                        <p class=" icon-plus panier"><a href="ajout.html" title="Ajouter cet article au panier" alt="Ajouter cet article au panier">Panier</a></p>
+                    </li>
+                </ul>
+                <p class="plus"><a href="rubrique.html" title="Aller sur la page pour voir plus de bons plan" alt="Aller sur la page pour voir plus de bons plan">Voir plus de bons plan</a></p>
+            </article>
+        </section>
+    <aside>
+        <div class="recherche">
+            <form action="#" method="post">
+                    <span class=" icon-search-4">
+                        <input type="search" name="Recherche" value="Recherche" />
+                     </span>
+            </form>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Hygiène</a>
                     <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Savons naturels</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Gels douches</a></li>
@@ -158,16 +233,16 @@
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Hygiène intime</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Soins</a>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Soins</a>
                     <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Visage</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Corps</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Hommes</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Beauté et parfums</a>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Beauté et parfums</a>
                     <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Maquillage</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Cosmétique</a></li>
@@ -176,8 +251,8 @@
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Massage</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Aromathérapie</a>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Aromathérapie</a>
                     <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Huiles essentielles</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Huiles végétales</a></li>
@@ -186,16 +261,16 @@
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Accessoires</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Fleur de Bach</a>
-                    <ul>>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Fleur de Bach</a>
+                    <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Remèdes d'urgence</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Les fleurs de Bach</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Fleurs de Bach en granules</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Santé</a>
+                <li class="sectionCategory">
+                    <a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie" class="titleCategorie">Santé</a>
                     <ul>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Complément alimentaire</a></li>
                         <li><a href="./categorie.html" title="Vers la catégorie" alt="Vers la catégorie">Argile</a></li>
@@ -205,6 +280,20 @@
             </ul>
         </div>
     </aside>
-</section>
+    </div>
+        <footer>
+            <nav>
+                <ul>
+                    <li><a href="#" title="Vers les mentions légales" alt="Vers les mentions légales">Mentions légales</a></li>
+                    <li><a href="#" title="Vers les conditions générales de vente" alt="Vers les conditions générales de ventes">Conditions générales de vente</a></li>
+                    <li><a href="#" title="Vers l'à propos de SeBio" alt="Vers l'à propos de SeBio">A propos de SeBio</a></li>
+                    <li><a href="#" title="Vers les modes de payement" alt="Vers les modes de payement">Modes de payement</a></li>
+                    <li><a href="#" title="Vers les Conditions de livraison" alt="Vers les Conditions de livraison">Conditions de livraison</a></li>
+                    <li><a href="#" title="Vers le suivit de commande" alt="Vers le suivit de commande">Suivit de commande</a></li>
+                    <li><a href="#" title="Vers les conditions de retour" alt="Vers les conditions de retour">Conditions de retour</a></li>
+                </ul>
+            </nav>
+        </footer>
+    </div>
 </body>
 </html>
