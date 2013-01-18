@@ -178,18 +178,12 @@ nav{
   z-index:3;
 }
 
-.firstSub{
-  margin-left: -0.75em;
-}
-
-.submenu li{
+.submenu a{
   border-left: none;
-
 }
 
 .submenu li:hover{
   background-image: none;
-  padding: 0 0 0 0.75em;
 }
 nav a:hover{
   font-family: @QuicksandBold;
@@ -212,12 +206,6 @@ nav li:hover{
   );
   height: 20px;
   margin: 0 0;
-  padding:0.75em 0.75em 0.5em 0.75em;
-
-}
-
-nav li:last-child:hover{
-  padding-right: 3.325em
 }
 
 nav li:hover .submenu{
@@ -232,22 +220,17 @@ nav li:hover li{
 
 nav>ul li{
   float: left;
-  margin: 0.75em 0 0.5em 0;
-  padding: 0 0.85em;
-  border-left: 1px solid @deepGreen;
   height: 1.25em;
-}
-
-nav>ul li:first-child{
-  border-left: none;
 }
 
 nav>ul a{
   color: @deepBrown;
   display: block;
+  padding: 0.75em 0.85em 0.70em 0.85em;
+  border-left: 1px solid @deepGreen;
 }
 
-nav li ul{
+nav li ul, .loginBox{
   background-image: @linearG;
   background-image: @oLinearG;
   background-image: @mozLinearG;
@@ -255,13 +238,42 @@ nav li ul{
   background-image: @msLinearG;
   background-image: @webkitG;
   padding: 0.5em;
-  margin-left: -0.5em;
   -webkit-border-bottom-right-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
   -moz-border-radius-bottomright: 6px;
   -moz-border-radius-bottomleft: 6px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 6px;
+}
+
+.loginBox{
+  margin: -0.1em;
+}
+
+.loginBox label{
+  display: block;
+  font-family: @QuicksandBold;
+  color: @deepBrown;
+}
+
+.loginBox input{
+  width: 200px;
+  display: block;
+  margin-bottom: 1em;
+}
+
+.loginBox input[type="checkbox"]{
+  width: 15px;
+  display: inline;
+  float: left;
+}
+
+.loginBox a:hover{
+  padding: none;
+}
+
+.lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
+  padding-right: 3.15em;
 }
 
               /* Content Header */
@@ -437,13 +449,14 @@ article h2, article p{
   .column(4);
 }
 
-.nouveaute h1, .coeur h1, .promos h1{
+.nouveaute h1 a, .coeur h1 a, .promos h1 a, h1, .similaire h1 a{
   font-family: @QuicksandBook;
   font-size: 1.5em;
   color: @deepBrown;
   margin: 0 auto;
   width: 200px;
   margin-bottom: 1em;
+  display: block;
 }
 
 .nouveaute li>a, .coeur li>a, .promos li>a{
@@ -535,13 +548,19 @@ footer nav{
 }
 
 footer nav li{
-  margin-top: 1.25em;
-  padding: 0 0.30em;
   height: 1em;
 }
 
+footer nav a{
+  padding: 1.5em 0.35em 0.75em 0.35em;
+}
+
+footer nav a:first-child{
+  border-left: 1px solid @deepGreen;
+}
+
 footer li:hover{
-  margin-top: 0.4em;
+  //margin-top: 0.4em;
 }
 
               /* Page rubrique  */
@@ -567,7 +586,7 @@ footer li:hover{
 }
 
 .sidebar ul{
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 .sectionCategory{
@@ -596,21 +615,21 @@ footer li:hover{
 
         /* Catégory */
 .tri{
-  .column(4);
+  .column(8);
 }
 
 .tri p, .tri a{
   font-size: 0.75em;
- // display: inline-block;
 }
 
 .tri p{
-  .column(3);
+  .column(2);
   margin-top: 0.25em;
 }
 
 .tri a{
   margin-left: 0.55em;
+  color: @deepGreen;
 }
 
 .filtre{
@@ -618,13 +637,21 @@ footer li:hover{
   margin: 1em 0;
 }
 
+.page{
+  .column(4);
+}
+
 .page li{
   float: left;
-  margin: 0 0.5em;
+  margin: 0 0.25em;
 }
 
 .page a{
   color:@deepGreen;
+}
+
+.page a:hover, .page a:active, .tri a:hover{
+  color: @deepBrown;
 }
 
 section footer{
@@ -637,4 +664,39 @@ footer .tri{
 
 .listingProduit li{
   margin-bottom: 2em;
+}
+
+footer .numberFirst, footer .numberLast{
+  margin-top: 0.5em;
+}
+
+      /* Produit  */
+.produitDescription{
+  margin-top: 1em;
+}
+
+.produitDescription figure{
+  .column(6);
+}
+
+.produitDescription section{
+  .column(6);
+}
+
+.produitDescription .description{
+  height: 100%;
+  color: @deepBrown;
+  line-height: 1.25em;
+}
+
+.similaire li{
+  .column(4);
+}
+
+.selection_article p{
+  .column(4);
+}
+
+.selection_article select{
+  .column(4);
 }

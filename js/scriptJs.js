@@ -1,10 +1,14 @@
 (function ($) {
     var $slider = $('.slider figure');
     var $page = $('.morePage');
-    var $triArticleFirst = $('.number li:first');
-    var $triArticleLast = $('.number li:last');
+    var $triArticleFirst = $('.numberFirst');
+    var $triArticleLast = $('.numberLast');
     var delay = 5000;
+    var $box = $('.loginBox');
+    var $form = $('#loginBox form');
+    var $login = $('.lastItem a');
 
+    //Slider accueil
     var switchImg = function () {
 
         var $nextImg = $slider.filter(':visible').next();
@@ -18,6 +22,7 @@
         });
     }
 
+    //Ajouter au panier
     var addPanier = function (e) {
         var $span = $('nav a span');
         var $valPanier = $span.text();
@@ -26,18 +31,36 @@
         $span.text(articleNumber);
     }
 
+    //Afficher plus d'article
     var addMore = function (e) {
-        console.log('ok');
         $page.show();
         $triArticleLast.hide();
         $triArticleFirst.show();
     }
 
+    //Afficher moins d'article
     var addLess = function (e) {
-        console.log('test');
         $page.hide();
         $triArticleLast.show();
         $triArticleFirst.hide();
+    }
+
+    //Connexion utilisateur
+    var login = function (e) {
+        $box.show();
+        var $email = $('#email').val();
+        var $password = $('#password').val();
+
+
+
+        $('#login').on('click', function(e){
+                addValue($email, $password);
+        });
+
+    };
+
+    var addValue = function(email, password){
+        console.log('Email: '+email+' - Password: '+password);
     }
 
     //Load de routine
@@ -45,12 +68,35 @@
         $slider.not(":first").hide();
         $page.hide();
         $triArticleFirst.hide();
+        $box.hide();
 
         setInterval(switchImg, delay);
         $('.panier').on('click', addPanier);
-        $triArticleFirst.on('click', addMore);
-        $triArticleLast.on('click', addLess);
+        $triArticleFirst.on('click', addLess);
+        $triArticleLast.on('click', addMore);
+        $login.on('click', login);
+
 
     });
 
 })(jQuery);
+
+/*$(function() {
+ var button = $('#loginButton');
+ var box = $('#loginBox');
+ var form = $('#loginForm');
+ button.removeAttr('href');
+ button.mouseup(function(login) {
+ box.toggle();
+ button.toggleClass('active');
+ });
+ form.mouseup(function() {
+ return false;
+ });
+ $(this).mouseup(function(login) {
+ if(!($(login.target).parent('#loginButton').length > 0)) {
+ button.removeClass('active');
+ box.hide();
+ }
+ });
+ });*/

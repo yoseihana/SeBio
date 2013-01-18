@@ -40,7 +40,7 @@
         <ul>
             <li>
                 <a href="./html/rubrique.html" title="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
-                <ul class="submenu firstSub">
+                <ul class="submenu">
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Hygiène">Hygiène</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Soins">Soins</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Beauté et parfums">Beauté et parfums</a></li>
@@ -101,8 +101,24 @@
             <li>
                 <a href="./html/panier.html" title="Aller dans votre panier" class="icon-basket-1"><span>0</span> article</a>
             </li>
-            <li classs="lastItem">
-                <a href="./html/membre.html" title="Aller vers l'espace membre" class="icon-lock-4">Connexion</a>
+            <li class="lastItem">
+                <a href="#" title="Aller vers l'espace membre" class="icon-lock-4">Connexion</a>
+
+                <div class="loginBox submenu">
+                    <form>
+                        <fieldset id="body">
+                            <fieldset>
+                                <label for="email">Email</label>
+                                <input type="text" name="email" id="email"/>
+                                <label for="password">Mot de passe</label>
+                                <input type="password" name="password" id="password"/>
+                                <input type="button" id="login" value="Connecter"/>
+                                <input type="checkbox" id="checkbox"/>
+                                <label for="checkbox">Se rappeler de moi</label>
+                            </fieldset>
+                            <span><a href="#">Mot de passe perdu?</a></span>
+                    </form>
+                </div>
             </li>
         </ul>
     </nav>
@@ -159,7 +175,7 @@
 <section>
     <article class="nouveaute">
         <header>
-            <h1>Nouveautés</h1>
+            <h1><a href="./html/categorie.html" title="Aller sur la page pour voir plus de nouveauté">Nouveautés</a></h1>
         </header>
         <ul>
             <li>
@@ -196,12 +212,12 @@
                 <p><a href="#" class=" icon-plus panier" title="Ajouter cet article au panier">Panier</a></p>
             </li>
         </ul>
-        <p class="plus"><a href="./html/rubrique.html" title="Aller sur la page pour voir plus de nouveauté">Voir plus de nouveautés</a></p>
+        <p class="plus"><a href="./html/categorie.html" title="Aller sur la page pour voir plus de nouveauté">Voir plus de nouveautés</a></p>
     </article>
     <hr>
     <article class="coeur">
         <header>
-            <h1>Coup de coeur</h1>
+            <h1><a href="./html/categorie.html" title="Aller sur la page pour voir plus de coups de coeur">Coup de coeur</a></h1>
         </header>
         <ul>
             <li>
@@ -238,12 +254,12 @@
                 <p><a href="#" class=" icon-plus panier" title="Ajouter cet article au panier">Panier</a></p>
             </li>
         </ul>
-        <p class="plus"><a href="./html/rubrique.html" title="Aller sur la page pour voir plus de coups de coeur">Voir plus de coups de coeur</a></p>
+        <p class="plus"><a href="./html/categorie.html" title="Aller sur la page pour voir plus de coups de coeur">Voir plus de coups de coeur</a></p>
     </article>
     <hr>
     <article class="promos">
         <header>
-            <h1>Bons Plans</h1>
+            <h1><a href="./html/categorie.html" title="Aller sur la page pour voir plus de bons plan">Bons Plans</a></h1>
         </header>
         <ul>
             <li>
@@ -281,7 +297,7 @@
             </li>
 
         </ul>
-        <p class="plus"><a href="./html/rubrique.html" title="Aller sur la page pour voir plus de bons plan">Voir plus de bons plan</a></p>
+        <p class="plus"><a href="./html/categorie.html" title="Aller sur la page pour voir plus de bons plan">Voir plus de bons plan</a></p>
     </article>
 </section>
 <aside>
