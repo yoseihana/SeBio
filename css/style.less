@@ -445,7 +445,7 @@ article p a{
 article h2, article p{
   padding: 0.5em 0;
 }
-.nouveaute li, .coeur li, .promos li, .listingProduit li{
+.nouveaute li, .coeur li, .promos li, .listingProduit li, .similaire li{
   .column(4);
 }
 
@@ -454,7 +454,7 @@ article h2, article p{
   font-size: 1.5em;
   color: @deepBrown;
   margin: 0 auto;
-  width: 200px;
+  width: 400px;
   margin-bottom: 1em;
   display: block;
 }
@@ -671,16 +671,22 @@ footer .numberFirst, footer .numberLast{
 }
 
       /* Produit  */
+.produit{
+  margin-top: 1em;
+}
+
 .produitDescription{
   margin-top: 1em;
 }
 
-.produitDescription figure{
+.imgProduit{
   .column(6);
+  margin-bottom: 2em;
 }
 
-.produitDescription section{
+.produitDescription{
   .column(6);
+  margin-bottom: 2em;
 }
 
 .produitDescription .description{
@@ -689,14 +695,24 @@ footer .numberFirst, footer .numberLast{
   line-height: 1.25em;
 }
 
-.similaire li{
-  .column(4);
+.produitDescription .prix{
+  font-family: @QuicksandBold;
 }
 
-.selection_article p{
-  .column(4);
+.produitDescription select, .produitDescription .prix, .produitDescription .panier{
+  .column(3.5);
+  margin-top: 1em;
 }
 
-.selection_article select{
-  .column(4);
+.produitDescription select{
+  margin-top: 2em;
+}
+
+.produitDescription .panier{
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+
+.similaire .plus{
+  margin-bottom: 2em;
 }
