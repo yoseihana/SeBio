@@ -5,7 +5,6 @@
     var $triArticleLast = $('.numberLast');
     var delay = 5000;
     var $box = $('.loginBox');
-    var $form = $('#loginBox form');
     var $login = $('.lastItem a');
     var $achat = $('.achat');
     var $livraison = $('article.livraison');
@@ -52,21 +51,7 @@
     //Connexion utilisateur
     var login = function (e) {
         $box.show();
-        var $email = $('#email').val();
-        var $password = $('#password').val();
-
-
-        $('#login').on('submit', function(e){
-               //addValue($email, $password);
-            console.log('ok');
-        });
-
     };
-
-
-    var addValue = function(email, password){
-        console.log('Email: '+email+' - Password: '+password);
-    }
 
     //Affiche l'étape de livraison
     var showLivraison = function(e){
