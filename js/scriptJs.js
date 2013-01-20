@@ -7,6 +7,10 @@
     var $box = $('.loginBox');
     var $form = $('#loginBox form');
     var $login = $('.lastItem a');
+    var $achat = $('.achat');
+    var $livraison = $('article.livraison');
+    var $confirmation = $('article.confirmation');
+    var $achat = $('article.achat');
 
     //Slider accueil
     var switchImg = function () {
@@ -52,15 +56,36 @@
         var $password = $('#password').val();
 
 
-
-        $('#login').on('click', function(e){
-                addValue($email, $password);
+        $('#login').on('submit', function(e){
+               //addValue($email, $password);
+            console.log('ok');
         });
 
     };
 
+
     var addValue = function(email, password){
         console.log('Email: '+email+' - Password: '+password);
+    }
+
+    //Affiche l'étape de livraison
+    var showLivraison = function(e){
+        $achat.hide();
+        $confirmation.hide();
+        $livraison.show();
+    }
+
+    //Affiche l'étape de confirmation d'achat
+    var showConfirmation = function(e){
+        $livraison.hide();
+        $confirmation.show();
+    }
+
+    //Affiche l'étape des d'achat
+    var showAchat = function(e){
+        $confirmation.hide();
+        $livraison.hide();
+        $achat.show();
     }
 
     //Load de routine
@@ -69,14 +94,17 @@
         $page.hide();
         $triArticleFirst.hide();
         $box.hide();
+        $livraison.hide();
+        $confirmation.hide();
 
         setInterval(switchImg, delay);
         $('.panier').on('click', addPanier);
         $triArticleFirst.on('click', addLess);
         $triArticleLast.on('click', addMore);
         $login.on('click', login);
-
-
+        $('input.livraison').on('click', showLivraison);
+        $('input.confirmation').on('click', showConfirmation);
+        $('input.achat').on('click', showAchat);
     });
 
 })(jQuery);

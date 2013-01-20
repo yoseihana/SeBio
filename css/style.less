@@ -226,7 +226,7 @@ nav>ul li{
 nav>ul a{
   color: @deepBrown;
   display: block;
-  padding: 0.75em 0.85em 0.70em 0.85em;
+  padding: 0.75em 0.70em 0.70em 0.85em;
   border-left: 1px solid @deepGreen;
 }
 
@@ -237,7 +237,7 @@ nav li ul, .loginBox{
   background-image: @webLinearG;
   background-image: @msLinearG;
   background-image: @webkitG;
-  padding: 0.5em;
+  padding: 0 0.5em 0.5em 0.5em;
   -webkit-border-bottom-right-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
   -moz-border-radius-bottomright: 6px;
@@ -254,6 +254,7 @@ nav li ul, .loginBox{
   display: block;
   font-family: @QuicksandBold;
   color: @deepBrown;
+  margin-top: 0.5em;
 }
 
 .loginBox input{
@@ -273,9 +274,12 @@ nav li ul, .loginBox{
 }
 
 .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
-  padding-right: 3.15em;
+  padding-right: 1em;
 }
 
+#login a:hover, #login a, #login a:active, #login a:focus{
+  padding-right: 1.8em;
+}
               /* Content Header */
 
 /* Slider */
@@ -454,7 +458,7 @@ article h2, article p{
   font-size: 1.5em;
   color: @deepBrown;
   margin: 0 auto;
-  width: 400px;
+  text-align:center;
   margin-bottom: 1em;
   display: block;
 }
@@ -715,4 +719,92 @@ footer .numberFirst, footer .numberLast{
 
 .similaire .plus{
   margin-bottom: 2em;
+}
+
+    /* Espace membre */
+.connexion{
+  .column(6);
+  .push(6);
+}
+
+.infoMembre h2{
+  height: 100%;
+}
+
+.infoMembre p{
+  margin-bottom: 0.5em;
+  line-height: 1.5em;
+}
+
+.infoMembre li{
+  color: @deepGreen;
+  margin-bottom: 0.5em;
+}
+
+.infoMembre strong{
+  font-family: @QuicksandBold;
+}
+
+.infoMembre section{
+  margin-top: 0;
+  .column(12);
+}
+
+    /* Conditions */
+.condition h1{
+  margin-top: 1em;
+}
+
+.condition h2, .condition article{
+  height: 100%;
+}
+
+.condition p{
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+    /* Panier */
+.etape, .etapeActive{
+  .column(4);
+  margin-bottom: 1em;
+  height: 50px;
+  background-repeat: no-repeat;
+}
+
+.etape{
+  background-image: url('../img/design/fondPanier.png');
+}
+
+.etapeActive{
+  background-image: url('../img/design/fondPanierActive.png');
+}
+
+.etape p, .etapeActive p{
+  margin: 0.5em 0 0 3em;
+}
+
+.etapeActive p{
+  color: white;
+}
+
+.etape p{
+  color: @deepBrown;
+}
+
+table{
+  border: 1px solid @deepGreen;
+  .column(12);
+}
+
+thead, tbody, tfoot, tr{
+  .column(12);
+}
+
+td{
+  .column(5);
+}
+
+td:last-child{
+  .column(2);
 }
