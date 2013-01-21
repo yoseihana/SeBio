@@ -845,7 +845,7 @@ td:last-child{
   margin-bottom: 1em;
 }
 
-.achat input, .livraison footer input, .confirmation footer input{
+.achat input, .achat footer a, .livraison footer input, .confirmation footer input{
   .column(4);
 }
 
@@ -906,4 +906,151 @@ td:last-child{
 
 .infoComplementaire a:hover{
   text-decoration: underline;
+}
+
+
+/*************** MEDIA 481px **************/
+
+@media only screen and (max-width: 481px){
+  body{
+    background-color: red;
+  }
+}
+
+/*************** MEDIA 482px - 768px **************/
+@media only screen and (min-width: 483px) and (max-width: 768px){
+  body{
+    background-color: blue;
+  }
+}
+
+/*************** MEDIA 945px - 770px **************/
+
+@media only screen and (max-width: 950px) and (min-width: 770px) {
+  /* Général */
+ body{
+    background-color: green;
+  }
+
+  nav > ul a{
+    padding: 0.75em 1em 0.70em 1em;
+    font-size: 0.85em;
+  }
+
+  nav{
+    height: 30px;
+  }
+
+  footer{
+    margin-bottom: 0;
+  }
+
+  footer nav a{
+    padding:1em 1em;
+    font-size: 0.85em;
+  }
+
+  .content{
+    width: 100%;
+    margin: 0;
+  }
+
+  section{
+    .column(9);
+    .push(0);
+  }
+
+  aside{
+    .column(3);
+    position: initial;
+    margin-top: 1em;
+  }
+
+  article{
+    height: 100%;
+  }
+
+  .breadcrumbs{
+    margin-top: 1em;
+  }
+
+  .connexionBoutton a:hover, .connexionBoutton a, .connexionBoutton a:active, .connexionBoutton a:focus{
+    padding-right: 0.4em;
+  }
+
+  .pageTitle{
+    left: 175px;
+    width: 200px;
+  }
+
+  /* Accueil */
+
+  .nouveaute li > a, .coeur li > a, .promos li > a{
+    height: 135px;
+  }
+
+  .description{
+    height: 25px;
+  }
+
+  .nouveaute h1 a, .coeur h1 a, .promos h1 a, h1, .similaire h1 a{
+    margin-top: 1em;
+  }
+
+  .slider figure{
+    display: none;
+  }
+
+  .slider{
+    height: 150px;
+    background-image: url('../img/design/sliderMedium.png');
+    background-repeat: no-repeat;
+    .column(8);
+    .push(2);
+    margin-top: 1em;
+  }
+
+  .annonces{
+    text-align: center;
+  }
+
+  hr::after{
+    content: url('../img/design/bandeauMedium.png');
+  }
+
+  .recherche input{
+    width: 125px;
+  }
+
+  aside input{
+    width: 150px;
+  }
+
+  .sidebarBlock{
+    margin: 0 0.5em;
+  }
+
+  .loginBox{
+    float: right;
+    right: 0;
+  }
+
+  /*  Bons plans */
+  .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
+    padding-right: 0;
+    font-size: 0.85em;
+  }
+
+  .slider img{
+    display: none;
+  }
+
+  /* Condition */
+  .condition{
+    margin-bottom: 1em;
+  }
+
+  .condition article, .livraison{
+    margin-left: 1em;
+  }
 }
