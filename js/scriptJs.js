@@ -23,7 +23,7 @@
         $slider.filter(':visible').fadeOut('fast', function () {
             $nextImg.fadeIn('fast')
         });
-    }
+    };
 
     //Ajouter au panier
     var addPanier = function (e) {
@@ -32,7 +32,7 @@
 
         var articleNumber = parseInt($valPanier) + 1;
         $span.text(articleNumber);
-    }
+    };
 
     //Afficher plus d'article
     var addMore = function (e) {
@@ -40,13 +40,13 @@
         $triArticleLast.hide();
         $triArticleFirst.show();
     }
-
+;
     //Afficher moins d'article
     var addLess = function (e) {
         $page.hide();
         $triArticleLast.show();
         $triArticleFirst.hide();
-    }
+    };
 
     //Connexion utilisateur
     var login = function (e) {
@@ -58,20 +58,20 @@
         $achat.hide();
         $confirmation.hide();
         $livraison.show();
-    }
+    };
 
     //Affiche l'étape de confirmation d'achat
     var showConfirmation = function(e){
         $livraison.hide();
         $confirmation.show();
-    }
+    };
 
     //Affiche l'étape des d'achat
     var showAchat = function(e){
         $confirmation.hide();
         $livraison.hide();
         $achat.show();
-    }
+    };
 
     //Load de routine
     $(function () {
@@ -93,23 +93,3 @@
     });
 
 })(jQuery);
-
-/*$(function() {
- var button = $('#loginButton');
- var box = $('#loginBox');
- var form = $('#loginForm');
- button.removeAttr('href');
- button.mouseup(function(login) {
- box.toggle();
- button.toggleClass('active');
- });
- form.mouseup(function() {
- return false;
- });
- $(this).mouseup(function(login) {
- if(!($(login.target).parent('#loginButton').length > 0)) {
- button.removeClass('active');
- box.hide();
- }
- });
- });*/
