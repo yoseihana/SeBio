@@ -4,8 +4,10 @@
     var $triArticleFirst = $('.numberFirst');
     var $triArticleLast = $('.numberLast');
     var delay = 5000;
-    var $box = $('.loginBox');
-    var $login = $('.lastItem a');
+    var $boxLogin = $('.connexionBoutton .loginBox');
+    var $boxInscription = $('.inscription .loginBox');
+    var $login = $('.lastItem');
+    var $inscription = $('.inscription');
     var $achat = $('.achat');
     var $livraison = $('article.livraison');
     var $confirmation = $('article.confirmation');
@@ -48,9 +50,11 @@
         $triArticleFirst.hide();
     };
 
-    //Connexion utilisateur
+    //Connexion utilisateur ou iscription
     var login = function (e) {
-        $box.show();
+        $boxLogin.hide();
+        $boxInscription.hide();
+        $(e.target).parent().find('.loginBox').show();
     };
 
     //Affiche l'étape de livraison
@@ -78,7 +82,8 @@
         $slider.not(":first").hide();
         $page.hide();
         $triArticleFirst.hide();
-        $box.hide();
+        $boxLogin.hide();
+        $boxInscription.hide();
         $livraison.hide();
         $confirmation.hide();
 
@@ -87,6 +92,7 @@
         $triArticleFirst.on('click', addLess);
         $triArticleLast.on('click', addMore);
         $login.on('click', login);
+        $inscription.on('click', login);
         $('input.livraison').on('click', showLivraison);
         $('input.confirmation').on('click', showConfirmation);
         $('input.achat').on('click', showAchat);

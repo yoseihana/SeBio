@@ -28,7 +28,7 @@
 
 
 </head>
-<body>
+<body id="accueil">
 <div class="container">
 <header id="top">
     <div class="logo">
@@ -38,7 +38,7 @@
     <nav>
         <ul>
             <li>
-                <a href="./html/rubrique.html" title="Aller vers la rubrique Santé et Soins">Santé et Soins</a>
+                <a href="./html/rubrique.html" title="Aller vers la rubrique Santé et Soins">Santé et Soin</a>
                 <ul class="submenu">
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Hygiène">Hygiène</a></li>
                     <li><a href="./html/categorie.html" title="Aller vers la catégorie Soins">Soins</a></li>
@@ -100,8 +100,22 @@
             <li>
                 <a href="./html/panier.html" title="Aller dans votre panier" class="icon-basket-1"><span>0</span> article</a>
             </li>
+            <li class="inscription">
+                <p href="#" title="Création d'un compte" class="icon-user-4">M'inscrire</p>
+                <div class="loginBox submenu">
+                    <form method="post" action="./html/connexion.html">
+                        <fieldset id="body">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email"/>
+                            <label for="password">Mot de passe</label>
+                            <input type="password" name="password" id="password"/>
+                            <input type="submit" id="login" value="Connecter"/>
+                        </fieldset>
+                    </form>
+                </div>
+            </li>
             <li class="lastItem connexionBoutton">
-                <a href="#" title="Aller vers l'espace membre" class="icon-lock-4">Connexion</a>
+                <p class="icon-lock-4">Connexion</p>
 
                 <div class="loginBox submenu">
                     <form method="post" action="./html/connexion.html">

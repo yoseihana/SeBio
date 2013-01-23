@@ -94,8 +94,6 @@ color-stop(0.76, rgb(255,252,207))
 @oBoxShadow: 1px 1px 10px 0px #656565;
 @boxShadow: 1px 1px 10px 0px #656565;
 
-
-
 /********************************
       DESIGN
  *******************************/
@@ -182,15 +180,12 @@ nav{
   border-left: none;
 }
 
-.submenu li:hover{
+.submenu li a:hover{
   background-image: none;
 }
 nav a:hover{
   font-family: @QuicksandBold;
   text-decoration: none;
-}
-
-nav li:hover{
   background-image: linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
   background-image: -o-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
   background-image: -moz-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
@@ -204,7 +199,10 @@ nav li:hover{
     color-stop(0, rgb(255,252,207)),
     color-stop(0.78, rgb(224,224,172))
   );
-  height: 20px;
+}
+
+nav li:hover{
+  height: 40px;
   margin: 0 0;
 }
 
@@ -223,7 +221,7 @@ nav>ul li{
   height: 1.25em;
 }
 
-nav>ul a{
+nav>ul a, nav>ul p{
   color: @deepBrown;
   display: block;
   padding: 0.75em 0.70em 0.70em 0.85em;
@@ -271,6 +269,11 @@ nav li ul, .loginBox{
 
 .loginBox a:hover{
   padding: none;
+}
+
+
+.inscription{
+  display: none;
 }
 
 .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
@@ -563,10 +566,6 @@ footer nav a:first-child{
   border-left: 1px solid @deepGreen;
 }
 
-footer li:hover{
-  //margin-top: 0.4em;
-}
-
               /* Page rubrique  */
 #rubrique .slider, #categorie .slider{
   height: 120px;
@@ -846,11 +845,11 @@ td:last-child{
 }
 
 .achat input, .achat footer a, .livraison footer input, .confirmation footer input{
-  .column(4);
+  .column(6);
 }
 
-.achat .continuer, .confirmation .continuer, .livraison .continuer{
-  .push(4);
+.achat input, .confirmation input, .livraison input{
+  font-size: 1.5em;
 }
 
 .espaceMembre a:hover, .espaceMembre a, .espaceMembre a:active, .espaceMembre a:focus{
@@ -912,28 +911,559 @@ td:last-child{
 /*************** MEDIA 481px **************/
 
 @media only screen and (max-width: 481px){
-  body{
-    background-color: red;
+
+/* Général */
+  .content{
+    width: 100%;
+    margin: 0;
+  }
+
+  section{
+    .column(12);
+  }
+
+  .breadcrumbs{
+    margin-top: 1em;
+  }
+
+  .panierAchat{
+    display: block;
+    float: left;
+    width: 50%;
+  }
+
+  .lastItem, .espaceMembre{
+    display: block;
+    width: 50%;
+  }
+
+  .panierAchat a, .lastItem a, .espaceMembre a{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0.75em 0;
+  }
+
+  .panierAchat a{
+    border: none;
+  }
+
+  nav{
+    clear:both;
+  }
+
+  section hr::after, hr::after{
+    content: initial;
+  }
+
+  .nouveaute li, .coeur li, .promos li, .listingProduit li, .similaire li{
+    .column(8);
+    .push(2);
+    margin-bottom: 0.5em;
+  }
+
+  .nouveaute li>a, .coeur li>a, .promos li>a, .listingProduit li>a, .similaire li>a{
+    display: block;
+    text-align: center;
+    height: 135px;
+  }
+
+  article h2, .description{
+    height: 100%;
+  }
+
+  .panier{
+    margin: 0.25em 0 1em 0;
+  }
+
+  .prix{
+    margin: 0.5em 0 1em 0;
+  }
+
+  .tri{
+    .column(12);
+    font-size: 2em;
+  }
+
+  .tri p{
+    .column(4);
+  }
+  .number{
+    .column(8);
+  }
+
+  .tri p{
+    margin-top: 0.25em;
+  }
+
+  .page{
+    margin: 0.5em 0;
+  }
+
+  .number li, .page li{
+    background-image: linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(255,252,207)), color-stop(0.78, rgb(224,224,172)));
+
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
+  }
+
+  .page li{
+    .column(2.25);
+  }
+
+  .tri .activePage{
+    color: @deepBrown;
+  }
+
+  .number a{
+    color: @deepBrown;
+    margin:0;
+    padding: 0.25em 0;
+    display: block;
+    text-align: center;
+  }
+
+  footer .number li{
+    display: block;
+  }
+
+  .plus{
+    margin-bottom: 1em;
+  }
+
+/*  Accueil */
+  #accueil .content, .logo img, footer li, #accueil footer, aside, .slider , nav li{
+    display: none;
+  }
+
+  .logo a{
+    background-image: url('../img/design/logoXSmall.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 100px;
+    .column(4);
+    .push(2);
+  }
+
+  #acceuil header nav{
+    clear: both;
+    background-image: none;
+  }
+
+  #accueil nav>ul li,  #condition footer li{
+    float: none;
+    height: 100%;
+    background-image: linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgb(255,252,207)), color-stop(0.78, rgb(224,224,172)));
+    width: 100%;
+    display: block;
+  }
+
+  #accueil nav a:hover, #accueil nav li ul, #accueil .submenu li{
+    background-image: none;
+  }
+
+  #accueil .connexionBoutton a:hover, #accueil .connexionBoutton a, #accueil .connexionBoutton a:active, #accueil .connexionBoutton a:focus{
+    padding-right: 0.6em;
+  }
+
+  #accueil nav li:hover .submenu{
+    display: block;
+    position: initial;
+  }
+
+  #accueil nav li:hover{
+    height: 100%;
+  }
+
+  #accueil nav li ul{
+    padding: 0 0 0 2em;
+  }
+
+  #accueil nav li:hover li{
+    margin: 0;
+  }
+
+  #accueil nav>ul a, #accueil nav>ul p{
+    font-family: @QuicksandBold;
+    font-size: 1.5em;
+    padding: .5em 0em 0.25em .5em
+  }
+
+  #accueil .submenu li a{
+    font-family: @QuicksandBook;
+    font-size: 1em;
+  }
+
+  #accueil .submenu{
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  #accueil .inscription{
+    display: block;
+  }
+
+  #accueil .loginBox{
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  #accueil .loginBox label{
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  #accueil .loginBox input{
+    .column(12);
+    margin-bottom: 1em;
+    height: 25px;
+  }
+
+  #accueil .loginBox input[type="checkbox"]{
+    margin-top: -0.5em;
+  }
+
+  #accueil .panierAchat a, #accueil .lastItem a, #accueil .espaceMembre a{
+    text-align: initial;
+  }
+
+/* Condition */
+  .condition article{
+    .column(12);
+  }
+
+  #condition footer li{
+    display: block;
+  }
+
+  #condition footer a{
+    padding: 1em 0;
+  }
+
+/* Membre */
+  .connexion{
+    .column(8);
+    .push(4);
+  }
+
+/* Panier */
+  .etape{
+    background-image:none;
+  }
+
+  .etapeActive{
+    background-image: none;
+  }
+
+  .etape p, .etapeActive p{
+    margin: .2em 0 0 1.25em;
+  }
+
+  .etape p{
+    color: @deepGreen;
+  }
+
+  .etapeActive p{
+    color: @deepBrown;
+  }
+
+  .achat select{
+    width: 100px;
+  }
+
+  .livraison label, .livraison input{
+    .column(12);
+  }
+
+  .livraison label{
+    margin-top: 0.5em;
+  }
+
+  .livraison h1, .confirmation h1, .achat h1{
+    margin-top: 0.5em;
+  }
+
+  .achat input, .confirmation input, .livraison input{
+    font-size: 1em;
+  }
+
+  .livraison footer input, .confirmation footer input{
+    .column(12);
+    margin: 0.5em 0;
+    height: 25px;
+  }
+
+  .confirmation table{
+    .column(12);
+  }
+
+  .adresse input{
+    .column(2);
+    .push(6);
+  }
+
+  /* Produit */
+.imgProduit{
+  .column(12);
+}
+
+.imgProduit img{
+  margin-left: 2em;
+}
+
+.produit .produitDescription{
+  .column(12);
+  margin-bottom: 2em;
+}
+
+.produitDescription h1{
+  margin-top: 1em;
+}
+
+/* Footer */
+  .apropos{
+    .column(12);
+    font-size: 1.25em;
+  }
+
+  footer{
+    margin-bottom: 0;
+  }
+
+  footer nav a{
+    padding:1em 0 0 0;
+    text-align: center;
+    font-family: @QuicksandBold;
+  }
+
+  footer nav a:hover{
+    background-image: none;
+  }
+
+  footer nav a:first-child{
+    border: none;
   }
 }
 
 /*************** MEDIA 482px - 768px **************/
 @media only screen and (min-width: 483px) and (max-width: 768px){
-  body{
-    background-color: blue;
+
+  /* Général */
+  .content{
+    width: 100%;
+    margin: 0;
   }
+
+  section{
+    .column(12);
+  }
+
+  .breadcrumbs{
+    margin-top: 1em;
+  }
+
+  .panierAchat{
+    display: block;
+   float: left;
+    width: 50%;
+  }
+
+  .lastItem, .espaceMembre{
+    display: block;
+    width: 50%;
+  }
+
+  .panierAchat a, .lastItem a, .espaceMembre a{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding: 0.75em 0;
+  }
+
+  .panierAchat a{
+    border: none;
+  }
+
+  nav{
+    clear:both;
+  }
+
+  section hr::after, hr::after{
+    content: initial;
+  }
+
+  /*  Accueil */
+  #accueil .content, .logo img, footer li, #accueil footer, aside, .slider , nav li{
+   display: none;
+  }
+
+  .logo a{
+    background-image: url('../img/design/logoSmall.png');
+    background-repeat: no-repeat;
+    display: block;
+    height: 150px;
+    .column(7);
+    .push(2.5);
+  }
+
+  #acceuil header nav{
+    clear: both;
+    background-image: none;
+  }
+
+  #accueil nav>ul li{
+    float: none;
+    height: 100%;
+    background-image: linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -o-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -moz-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -ms-linear-gradient(bottom, rgb(255,252,207) 0%, rgb(224,224,172) 78%);
+    background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(255,252,207)),
+      color-stop(0.78, rgb(224,224,172))
+    );
+  width: 100%;
+    display: block;
+  }
+
+  #accueil nav a:hover, #accueil nav li ul, #accueil .submenu li{
+    background-image: none;
+  }
+
+  #accueil .connexionBoutton a:hover, #accueil .connexionBoutton a, #accueil .connexionBoutton a:active, #accueil .connexionBoutton a:focus{
+    padding-right: 0.6em;
+  }
+
+  #accueil nav li:hover .submenu{
+    display: block;
+    position: initial;
+  }
+
+  #accueil nav li:hover{
+    height: 100%;
+  }
+
+  #accueil nav li ul{
+    padding: 0 0 0 2em;
+  }
+
+  #accueil nav li:hover li{
+    margin: 0;
+  }
+
+  #accueil nav>ul a, #accueil nav>ul p{
+    font-family: @QuicksandBold;
+    font-size: 1.5em;
+    padding: .5em 0em 0.25em .5em
+  }
+
+  #accueil .submenu li a{
+    font-family: @QuicksandBook;
+    font-size: 1em;
+  }
+
+  #accueil .submenu{
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  #accueil .inscription{
+    display: block;
+  }
+
+  #accueil .loginBox{
+    margin-bottom: 0;
+    margin: 0;
+  }
+
+  #accueil .loginBox label{
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  #accueil .loginBox input{
+    .column(12);
+    margin-bottom: 1em;
+    height: 25px;
+  }
+
+  #accueil .loginBox input[type="checkbox"]{
+    margin-top: -0.5em;
+  }
+
+  /* Condition */
+    .condition article{
+      .column(12);
+    }
+
+    /* Membre */
+  .connexion{
+    .column(7);
+    .push(5.5);
+  }
+
+  /* Panier */
+  .etape{
+    background-image: url('../img/design/fondPanierSmall.png');
+  }
+
+  .etapeActive{
+    background-image: url('../img/design/fondPanierActiveSmall.png');
+  }
+
+  .etape p, .etapeActive p{
+    margin: .2em 0 0 1.25em;
+  }
+
+  .achat input, .confirmation input, .livraison input{
+    font-size: 1em;
+  }
+
+  /* Footer */
+  .apropos{
+    .column(12);
+    font-size: 1.25em;
+  }
+
+  footer{
+    margin-bottom: 0;
+  }
+
+  footer nav a{
+    padding:1em 0 0 0;
+    text-align: center;
+    font-family: @QuicksandBold;
+  }
+
+  footer nav a:hover{
+    background-image: none;
+  }
+
+  footer nav a:first-child{
+    border: none;
+  }
+
 }
 
 /*************** MEDIA 945px - 770px **************/
 
 @media only screen and (max-width: 950px) and (min-width: 770px) {
   /* Général */
- body{
-    background-color: green;
-  }
-
   nav > ul a{
-    padding: 0.75em 1em 0.70em 1em;
+    padding: .55em 0.65em .6em 0.65em;
     font-size: 0.85em;
   }
 
@@ -946,7 +1476,7 @@ td:last-child{
   }
 
   footer nav a{
-    padding:1em 1em;
+    padding:1em 0.3em;
     font-size: 0.85em;
   }
 
@@ -974,8 +1504,11 @@ td:last-child{
     margin-top: 1em;
   }
 
-  .connexionBoutton a:hover, .connexionBoutton a, .connexionBoutton a:active, .connexionBoutton a:focus{
-    padding-right: 0.4em;
+  li.connexionBoutton a:hover, li.connexionBoutton a, li.connexionBoutton a:active, li.connexionBoutton a:focus{
+    padding-right: 0;
+    display: block;
+    width: 100%;
+    text-align:center;
   }
 
   .pageTitle{
@@ -997,7 +1530,7 @@ td:last-child{
     margin-top: 1em;
   }
 
-  .slider figure{
+  .slider img, .slider .moreInfo{
     display: none;
   }
 
@@ -1039,10 +1572,7 @@ td:last-child{
   .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
     padding-right: 0;
     font-size: 0.85em;
-  }
-
-  .slider img{
-    display: none;
+    padding-left: 0;
   }
 
   /* Condition */
