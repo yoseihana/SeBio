@@ -277,7 +277,17 @@ nav li ul, .loginBox{
 }
 
 .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
-  padding-right: 1.45em;
+  padding-right: 1.1em;
+}
+
+.userLogin .lastItem a:hover, .userLogin .lastItem a:active, .userLogin .lastItem a:focus, .userLogin .lastItem a{
+  padding-right: 1em;
+}
+
+.makeup .lastItem a:hover, .makeup .lastItem a:active, .makeup .lastItem a:focus, .makeup .lastItem a,
+.finalisation .espaceMembre a:hover, .finalisation .espaceMembre a:active, .finalisation .espaceMembre a:focus, .finalisation .espaceMembre a,
+#categorie .lastItem a:hover, #categorie .lastItem a:active, #categorie .lastItem a:focus, #categorie .lastItem a{
+  padding-right: 0.5em;
 }
 
 .connexionBoutton a:hover, .connexionBoutton a, .connexionBoutton a:active, .connexionBoutton a:focus{
@@ -391,10 +401,6 @@ article p:hover a, .panier, .prix a{
   color: @deepBrown;
 }
 
-.panier, .prix{
-  margin: 1em 0 2em 0;
-}
-
 .description{
   height: 50px;
 }
@@ -433,16 +439,18 @@ article p:hover a, .panier, .prix a{
 }
 
 .prix{
-  float: left;
+  .column(4);
+  margin-top: 0.5em;
 }
 
 .panier{
-  float: right;
-  margin-right: 0.5em;
+  .column(6);
 }
 
 .plus{
-  float: right;
+  .column(5.5);
+  .push(7.5);
+  margin-top: 1em;
 }
 
 article p a{
@@ -559,7 +567,7 @@ footer nav li{
 }
 
 footer nav a{
-  padding: 1.5em 0.35em 0.75em 0.25em;
+  padding: 1.5em 0.4em 0.75em 0.36em;
 }
 
 footer nav a:first-child{
@@ -567,11 +575,11 @@ footer nav a:first-child{
 }
 
               /* Page rubrique  */
-#rubrique .slider, #categorie .slider{
+#rubrique .slider, #categorie .slider, #conditions .slider{
   height: 120px;
 }
 
-#rubrique aside, #categorie aside{
+#rubrique aside, #categorie aside, #conditions aside{
   top: 175px;
 }
 
@@ -618,20 +626,16 @@ footer nav a:first-child{
 
         /* Catégory */
 .tri{
-  .column(8);
-}
-
-.tri p, .tri a{
-  font-size: 0.75em;
+  .column(6);
 }
 
 .tri p{
-  .column(2);
-  margin-top: 0.25em;
+  .column(4);
 }
 
 .tri a{
   margin-left: 0.55em;
+  padding: 0.5em;
   color: @deepGreen;
 }
 
@@ -641,7 +645,7 @@ footer nav a:first-child{
 }
 
 .page{
-  .column(4);
+  .column(6);
 }
 
 .page li{
@@ -677,6 +681,8 @@ footer .numberFirst, footer .numberLast{
 .produit{
   margin-top: 1em;
 }
+
+
 
 .produitDescription{
   margin-top: 1em;
@@ -717,6 +723,10 @@ footer .numberFirst, footer .numberLast{
 }
 
 .similaire .plus{
+  margin-bottom: 2em;
+}
+
+.descProduit section{
   margin-bottom: 2em;
 }
 
@@ -849,7 +859,7 @@ td:last-child{
 }
 
 .achat input, .confirmation input, .livraison input{
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 .espaceMembre a:hover, .espaceMembre a, .espaceMembre a:active, .espaceMembre a:focus{
@@ -994,6 +1004,7 @@ td:last-child{
 
   .tri p{
     margin-top: 0.25em;
+    font-size: 0.5em,
   }
 
   .page{
@@ -1013,6 +1024,9 @@ td:last-child{
 
   .page li{
     .column(2.25);
+    font-size: 0.75em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
   }
 
   .tri .activePage{
@@ -1025,6 +1039,7 @@ td:last-child{
     padding: 0.25em 0;
     display: block;
     text-align: center;
+    font-size: 0.5em;
   }
 
   footer .number li{
@@ -1073,6 +1088,7 @@ td:last-child{
 
   #accueil .connexionBoutton a:hover, #accueil .connexionBoutton a, #accueil .connexionBoutton a:active, #accueil .connexionBoutton a:focus{
     padding-right: 0.6em;
+    text-align: initial;
   }
 
   #accueil nav li:hover .submenu{
@@ -1136,6 +1152,11 @@ td:last-child{
     text-align: initial;
   }
 
+.plus{
+  .column(7);
+  .push(5);
+}
+
 /* Condition */
   .condition article{
     .column(12);
@@ -1151,8 +1172,8 @@ td:last-child{
 
 /* Membre */
   .connexion{
-    .column(8);
-    .push(4);
+    .column(10);
+    .push(2);
   }
 
 /* Panier */
@@ -1343,8 +1364,9 @@ td:last-child{
     background-image: none;
   }
 
-  #accueil .connexionBoutton a:hover, #accueil .connexionBoutton a, #accueil .connexionBoutton a:active, #accueil .connexionBoutton a:focus{
+  #accueil .connexionBoutton a:hover, #accueil .connexionBoutton a, #accueil .connexionBoutton a:active, #accueil .connexionBoutton a:focus, .lastItem a{
     padding-right: 0.6em;
+    text-align: initial;
   }
 
   #accueil nav li:hover .submenu{
@@ -1404,6 +1426,16 @@ td:last-child{
     margin-top: -0.5em;
   }
 
+  .panier, .prix{
+    font-size: 0.75em;
+  }
+
+  .plus{
+    .column(6);
+    .push(6);
+    margin-top: 1em;
+  }
+
   /* Condition */
     .condition article{
       .column(12);
@@ -1441,6 +1473,20 @@ td:last-child{
     font-size: 1em;
   }
 
+  td select{
+    width: 100px;
+  }
+
+  .livraison label{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+  }
+
+  .confirmation table{
+    width: 435px;
+  }
+
   /* Footer */
   .apropos{
     .column(12);
@@ -1469,24 +1515,52 @@ td:last-child{
 
 /*************** MEDIA 945px - 770px **************/
 
-@media only screen and (max-width: 950px) and (min-width: 770px) {
+@media only screen and (max-width: 945px) and (min-width: 770px) {
   /* Général */
+
   nav > ul a{
-    padding: .55em 0.65em .6em 0.65em;
+    padding: .55em 0.6em .6em 0.6em;
     font-size: 0.85em;
+  }
+
+  #rubrique nav > ul a, #categorie nav > ul a{
+    padding: .55em 0.35em .6em 0.35em;
+  }
+
+  #conditions nav > ul a,
+  .userLogin nav > ul a{
+    padding: .55em 0.3em .6em 0.3em;
   }
 
   nav{
     height: 30px;
   }
 
+  nav li:hover{
+    height: 100%;
+  }
+
+  #accueil .lastItem a{
+    padding-right:0.3em;
+  }
+
+  .makeup .lastItem a:hover, .makeup .lastItem a:active, .makeup .lastItem a:focus, .makeup .lastItem a,
+  .finalisation .espaceMembre a:hover, .finalisation .espaceMembre a:active, .finalisation .espaceMembre a:focus, .finalisation .espaceMembre a,
+  #categorie .lastItem a:hover, #categorie .lastItem a:active, #categorie .lastItem a:focus, #categorie .lastItem a{
+    padding: 0.55em 0.1em;
+  }
+
+  form a:hover{
+    background-image: none;
+  }
+
   footer{
     margin-bottom: 0;
   }
 
-  footer nav a{
-    padding:1em 0.3em;
-    font-size: 0.85em;
+  #categorie footer nav a,  #rubrique footer nav a, #accueil footer nav a,  #conditions footer nav a{
+    padding:1em 0;
+    font-size: 0.75em;
   }
 
   .content{
@@ -1503,6 +1577,7 @@ td:last-child{
     .column(3);
     position: initial;
     margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   article{
@@ -1532,7 +1607,7 @@ td:last-child{
   }
 
   .description{
-    height: 25px;
+    height: 35px;
   }
 
   .nouveaute h1 a, .coeur h1 a, .promos h1 a, h1, .similaire h1 a{
@@ -1561,11 +1636,11 @@ td:last-child{
   }
 
   .recherche input{
-    width: 125px;
+    width: 118px;
   }
 
   aside input{
-    width: 150px;
+    width: 147px;
   }
 
   .sidebarBlock{
@@ -1591,5 +1666,16 @@ td:last-child{
 
   .condition article, .livraison{
     margin-left: 1em;
+  }
+
+  /* Connexion */
+  .connexion{
+    .column(7);
+    .push(5);
+  }
+
+  /* Panier */
+  #categorie .espaceMembre a{
+    padding: 0.55em 0;
   }
 }
