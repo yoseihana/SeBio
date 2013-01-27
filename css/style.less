@@ -201,11 +201,6 @@ nav a:hover{
   );
 }
 
-nav li:hover{
-  height: 40px;
-  margin: 0 0;
-}
-
 nav li:hover .submenu{
   display: inline-block;
   position: absolute;
@@ -271,6 +266,9 @@ nav li ul, .loginBox{
   padding: none;
 }
 
+footer nav a{
+  font-size: 0.7em;
+}
 
 .inscription{
   display: none;
@@ -556,10 +554,6 @@ aside header{
 footer{
   clear: both;
   margin-bottom: 1em;
-}
-
-footer nav{
-  font-size: 12px;
 }
 
 footer nav li{
@@ -917,7 +911,6 @@ td:last-child{
   text-decoration: underline;
 }
 
-
 /*************** MEDIA 481px **************/
 
 @media only screen and (max-width: 481px){
@@ -960,6 +953,10 @@ td:last-child{
 
   nav{
     clear:both;
+  }
+
+  footer nav{
+    font-size: 12px;
   }
 
   section hr::after, hr::after{
@@ -1520,11 +1517,15 @@ td:last-child{
 
   nav > ul a{
     padding: .55em 0.6em .6em 0.6em;
-    font-size: 0.85em;
+    //font-size: 0.85em;
   }
 
   #rubrique nav > ul a, #categorie nav > ul a{
     padding: .55em 0.35em .6em 0.35em;
+  }
+
+  #rubrique nav > ul a:hover, #categorie nav > ul a:hover{
+    padding: .4em 0.35em;
   }
 
   #conditions nav > ul a,
@@ -1558,9 +1559,10 @@ td:last-child{
     margin-bottom: 0;
   }
 
-  #categorie footer nav a,  #rubrique footer nav a, #accueil footer nav a,  #conditions footer nav a{
-    padding:1em 0;
-    font-size: 0.75em;
+  #categorie footer nav a,  #rubrique footer nav a, #accueil footer nav a,  #conditions footer nav a,
+  #categorie footer nav a:hover,  #rubrique footer nav a:hover, #accueil footer nav a:hover,  #conditions footer nav a:hover{
+    padding:0.75em 0;
+    font-size: 0.7em;
   }
 
   .content{
@@ -1598,6 +1600,10 @@ td:last-child{
   .pageTitle{
     left: 175px;
     width: 200px;
+  }
+
+  nav a:hover{
+    padding: 0.4em 0.6em;
   }
 
   /* Accueil */
@@ -1655,7 +1661,7 @@ td:last-child{
   /*  Bons plans */
   .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
     padding-right: 0;
-    font-size: 0.85em;
+    font-size: 1em;
     padding-left: 0;
   }
 
