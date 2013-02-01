@@ -27,6 +27,18 @@
         });
     };
 
+    var previousImg = function(e){
+        var $nextImg = $slider.filter(':visible').prev();
+
+        if ($nextImg.size() == 0) {
+            $nextImg = $slider.first();
+        }
+
+        $slider.filter(':visible').fadeOut('fast', function () {
+            $nextImg.fadeIn('fast')
+        });
+    }
+
     //Ajouter au panier
     var addPanier = function (e) {
         var $span = $('nav a span');
@@ -88,6 +100,8 @@
         $confirmation.hide();
 
         setInterval(switchImg, delay);
+        $('.suivant').on('click', switchImg);
+        $('.precedent').on('click', previousImg);
         $('.panier').on('click', addPanier);
         $triArticleFirst.on('click', addLess);
         $triArticleLast.on('click', addMore);

@@ -45,12 +45,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/animation.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/fontello-codes.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/fontello-embedded.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/fontello-ie7-codes.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/fontello-ie7.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="../css/fontello.css" media="screen"/>
     <link rel="stylesheet" type="text/css" href="../css/print.css" media="print"/>
 
     <link rel="shortcut icon" href="../img/design/shop_cart.png">
@@ -129,7 +123,7 @@
                 <a href="panier.html" title="Aller dans votre panier" class="icon-basket-1"><span>3</span> articles</a>
             </li>
             <li class="espaceMembre">
-                <a href="membre.html" title="Aller vers l'espace membre" class="icon-logout-2">Espace Membre</a>
+                <a href="membre.html" title="Aller vers l'espace membre" class="icon-logout-2">Mon compte</a>
             </li>
         </ul>
     </nav>
@@ -143,7 +137,7 @@
         </div>
     </a>
 </header>
-<section>
+<section itemscope itemtype="http://schema.org/LocalBusiness">
 <header class="achatFinal">
     <div class="breadcrumbs">
         <a href="../index.html" title="Retour à la page d'accueil">Accueil</a>
@@ -191,7 +185,7 @@
                 </select>
             </td>
             <td>
-                <p class="finalPrix">7,50€</p>
+                <p class="finalPrix" itemprop="priceRange">7,50€</p>
             </td>
         </tr>
         <tr>
@@ -208,7 +202,7 @@
                 </select>
             </td>
             <td>
-                <p class="finalPrix">21,30€ </p>
+                <p class="finalPrix" class="prix" itemprop="priceRange">21,30€ </p>
             </td>
         </tr>
         <tr>
@@ -225,13 +219,13 @@
                 </select>
             </td>
             <td>
-                <p class="finalPrix">18,75€ </p>
+                <p class="finalPrix" itemprop="priceRange">18,75€ </p>
             </td>
         </tr>
         <tr>
             <td><p>Total</p></td>
             <td><p>4</p></td>
-            <td><p class="finalPrix">47,50€</p></td>
+            <td><p class="finalPrix" itemprop="priceRange">47,50€</p></td>
         </tr>
         <tr>
             <td>
@@ -242,7 +236,7 @@
                     <option value="Aucun bon">Il n'y a aucun bon actuellement</option>
                 </select>
             </td>
-            <td><p class="finalPrix">- 0€</p></td>
+            <td><p class="finalPrix" itemprop="priceRange">- 0€</p></td>
         </tr>
         <tr>
             <td>
@@ -258,7 +252,7 @@
         <tr>
             <td><p>Total</p></td>
             <td><p>4 articles</p></td>
-            <td><p class="finalPrix">47,50€</p></td>
+            <td><p class="finalPrix" itemprop="priceRange">47,50€</p></td>
         </tr>
         </tfoot>
     </table>
@@ -279,14 +273,14 @@
     </header>
     <h2>Choississez une addresse de livraison</h2>
 
-    <div class="adresse">
+    <div class="adresse" itemscope itemtype="http://schema.org/Person" itemprop="address" itemtype="http://schema.org/PostalAddress">
         <input type="radio" name="adresse" value="adresse">
 
-        <p>Mme Padmé Naberrie</p>
+        <p itemprop="name">Mme Padmé Naberrie</p>
 
-        <p>Avenue de la Résistance, 42 </p>
+        <p itemprop="streetAddress">Avenue de la Résistance, 42 </p>
 
-        <p>Naboo 4619</p>
+        <p itemprop="addressLocality">Naboo 4619</p>
     </div>
     <form method="post" action="#">
         <fieldset>
@@ -359,7 +353,7 @@
             <td><p>1</p>
             </td>
             <td>
-                <p class="finalPrix">7,50€</p>
+                <p class="finalPrix" itemprop="priceRange">7,50€</p>
             </td>
         </tr>
         <tr>
@@ -370,7 +364,7 @@
                 <p>2</p>
             </td>
             <td>
-                <p class="finalPrix">21,30€ </p>
+                <p class="finalPrix" itemprop="priceRange">21,30€ </p>
             </td>
         </tr>
         <tr>
@@ -381,20 +375,20 @@
                 <p>1</p>
             </td>
             <td>
-                <p class="finalPrix">18,75€ </p>
+                <p class="finalPrix" itemprop="priceRange">18,75€ </p>
             </td>
         </tr>
         <tr>
             <td><p>Livraison</p></td>
             <td><p>1 colis</p></td>
-            <td><p class="finalPrix">6€</p></td>
+            <td><p class="finalPrix" itemprop="priceRange">6€</p></td>
         </tr>
         </tbody>
         <tfoot>
         <tr>
             <td><p>Total</p></td>
             <td><p>4 articles</p></td>
-            <td><p class="finalPrix">47,50€</p></td>
+            <td><p class="finalPrix" itemprop="priceRange">47,50€</p></td>
         </tr>
         </tfoot>
     </table>

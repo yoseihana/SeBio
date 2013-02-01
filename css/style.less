@@ -1,4 +1,10 @@
-@import 'reset.css';
+@import 'reset.less';
+@import 'animation.css';
+@import 'fontello-codes.css';
+@import 'fontello-embedded.css';
+@import 'fontello-ie7-codes.css';
+@import 'fontello-ie7.css';
+@import 'fontello.css';
 
 /* Import GRID */
 @import 'grid.less';
@@ -145,7 +151,7 @@ a{
 
                                 /* Header */
 header#top{
-  width: 100%
+  width: 960px;
 }
 /* Logo */
 .logo{
@@ -169,6 +175,7 @@ nav{
   box-shadow: @boxShadow;
   filter:progid:DXImageTransform.Microsoft.Shadow(color=#dde2d3, Direction=180, Strength=5);
   z-index: 2;
+overflow: auto;
 }
 
 .submenu{
@@ -263,7 +270,7 @@ nav li ul, .loginBox{
 }
 
 .loginBox a:hover{
-  padding: none;
+  background-image: none;
 }
 
 footer nav a{
@@ -279,7 +286,7 @@ footer nav a{
 }
 
 .userLogin .lastItem a:hover, .userLogin .lastItem a:active, .userLogin .lastItem a:focus, .userLogin .lastItem a{
-  padding-right: 1em;
+  padding-right: 2.9em;
 }
 
 .makeup .lastItem a:hover, .makeup .lastItem a:active, .makeup .lastItem a:focus, .makeup .lastItem a,
@@ -297,6 +304,22 @@ footer nav a{
 .slider {
   height: 300px;
   margin-top: 1em;
+}
+
+.suivant, .precedent{
+  font-size: 2em;
+  font-family: @QuicksandBold;
+  position: absolute;
+  top: 200px;
+  color: rgb(255,255,255);
+}
+
+.suivant{
+  left: 700px;
+}
+
+.suivant:hover, .precedent:hover{
+  cursor: pointer;
 }
 
 .slider figure {
@@ -413,7 +436,7 @@ article p:hover a, .panier, .prix a{
   background: @msGardientL;
   background: @lGardient;
   filter: @filter;
-  padding: 0.5em;
+  padding: 0.25em;
   -moz-box-shadow: @mozShadow;
   -webkit-box-shadow: @webShadow;
   -o-box-shadow: @oBoxShadow;
@@ -442,7 +465,8 @@ article p:hover a, .panier, .prix a{
 }
 
 .panier{
-  .column(6);
+  .column(5);
+  .push(1);
 }
 
 .plus{
@@ -554,6 +578,7 @@ aside header{
 footer{
   clear: both;
   margin-bottom: 1em;
+  width: 960px;
 }
 
 footer nav li{
@@ -712,7 +737,7 @@ footer .numberFirst, footer .numberLast{
 }
 
 .produitDescription .panier{
-  margin-top: 0.5em;
+  margin-top: 0.65em;
   margin-left: 1em;
 }
 
@@ -765,6 +790,15 @@ footer .numberFirst, footer .numberLast{
 .condition p{
   padding: 0;
   margin-bottom: 0.5em;
+}
+
+dd, dt{
+  color: @deepGreen;
+  margin-bottom: 0.25em;
+}
+
+dl{
+  margin-bottom: 1em;
 }
 
     /* Panier */
@@ -925,6 +959,10 @@ td:last-child{
     .column(12);
   }
 
+  header#top{
+    width: 100%;
+  }
+
   .breadcrumbs{
     margin-top: 1em;
   }
@@ -1001,7 +1039,7 @@ td:last-child{
 
   .tri p{
     margin-top: 0.25em;
-    font-size: 0.5em,
+    font-size: 0.5em;
   }
 
   .page{
@@ -1065,6 +1103,10 @@ td:last-child{
     clear: both;
     background-image: none;
   }
+
+#accueil nav{
+  overflow: initial;
+}
 
   #accueil nav>ul li,  #conditions footer li{
     float: none;
@@ -1255,6 +1297,7 @@ td:last-child{
 
   footer{
     margin-bottom: 0;
+    width: 100%;
   }
 
   footer nav a{
@@ -1279,6 +1322,10 @@ td:last-child{
   .content{
     width: 100%;
     margin: 0;
+  }
+
+  header#top{
+    width: 100%;
   }
 
   section{
@@ -1322,6 +1369,10 @@ td:last-child{
   /*  Accueil */
   #accueil .content, .logo img, footer li, #accueil footer, aside, .slider , nav li{
    display: none;
+  }
+
+  #accueil nav{
+    overflow: initial;
   }
 
   .logo a{
@@ -1423,7 +1474,7 @@ td:last-child{
     margin-top: -0.5em;
   }
 
-  .panier, .prix{
+  .prix{
     font-size: 0.75em;
   }
 
@@ -1492,6 +1543,7 @@ td:last-child{
 
   footer{
     margin-bottom: 0;
+    width: 100%;
   }
 
   footer nav a{
@@ -1516,16 +1568,21 @@ td:last-child{
   /* Général */
 
   nav > ul a{
-    padding: .55em 0.6em .6em 0.6em;
-    //font-size: 0.85em;
+    padding: .6em 0.45em .6em 0.45em;
+    font-size: 0.85em;
   }
 
-  #rubrique nav > ul a, #categorie nav > ul a{
-    padding: .55em 0.35em .6em 0.35em;
+  footer, header#top{
+    width: 100%;
+  }
+
+  #acceuil nav > ul a{
+    padding: .60em 0.35em .6em 0.35em;
+    font-size: 0.85em;
   }
 
   #rubrique nav > ul a:hover, #categorie nav > ul a:hover{
-    padding: .4em 0.35em;
+    padding: .6em 0.35em;
   }
 
   #conditions nav > ul a,
@@ -1542,7 +1599,8 @@ td:last-child{
   }
 
   #accueil .lastItem a{
-    padding-right:0.3em;
+    padding: 0.6em;
+    font-size: 0.85em;
   }
 
   .makeup .lastItem a:hover, .makeup .lastItem a:active, .makeup .lastItem a:focus, .makeup .lastItem a,
@@ -1561,8 +1619,8 @@ td:last-child{
 
   #categorie footer nav a,  #rubrique footer nav a, #accueil footer nav a,  #conditions footer nav a,
   #categorie footer nav a:hover,  #rubrique footer nav a:hover, #accueil footer nav a:hover,  #conditions footer nav a:hover{
-    padding:0.75em 0;
-    font-size: 0.7em;
+    padding:1.2em 0;
+    font-size: 0.55em;
   }
 
   .content{
@@ -1603,7 +1661,7 @@ td:last-child{
   }
 
   nav a:hover{
-    padding: 0.4em 0.6em;
+    padding: 0.6em 0.5em;
   }
 
   /* Accueil */
@@ -1661,7 +1719,7 @@ td:last-child{
   /*  Bons plans */
   .lastItem a:hover, .lastItem a, .lastItem a:active, .lastItem a:focus{
     padding-right: 0;
-    font-size: 1em;
+    font-size: 0.85em;
     padding-left: 0;
   }
 
